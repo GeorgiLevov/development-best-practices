@@ -62,5 +62,9 @@
 
 ## Animation Craft, Particles & Procedural Motion
 
-- [Animation Craft, Particles & Procedural Motion index](index-animation.md): Partial and CSS-variable `@keyframes`, symmetrical/contained particle positioning, polar coordinates and CSS trig dispersion, linear/exponential interpolation (`normalize`/`clamp`), batched cleanup vs DOM pooling, custom easing curves and bespoke "juice", `filter: hue-rotate()` color shifting, and reduced-motion alternatives/controls. (8 practices; sections: Keyframes, Geometry & Interpolation; Performance, Juice, Color & Motion Accessibility.)
+- [Animation Craft, Particles & Procedural Motion index](index-animation.md): Partial and CSS-variable `@keyframes`, symmetrical/contained particle positioning, polar coordinates and CSS trig dispersion, linear/exponential interpolation (`normalize`/`clamp`), batched cleanup vs DOM pooling, custom easing curves and bespoke "juice", `filter: hue-rotate()` color shifting, reduced-motion alternatives/controls, CSS `linear()` springs & library/compositor tradeoffs, purposeful hover triggers, button border scaling, boops & squash-and-stretch, jointed/staggered/asymmetric choreography, and UI sound effects (`use-sound`/sprites/mute). (14 practices; sections: Keyframes, Geometry & Interpolation; Performance, Juice, Color & Motion Accessibility; Springs, Interaction Design & Sound Effects.)
+
+## SVG Primitives, Coordinates, Masks & Animation
+
+- [SVG Primitives, Coordinates, Masks & Animation index](index-svg.md): Inline SVG primitives/strokes/DOM stacking/`paint-order` text, `viewBox`/`preserveAspectRatio`/`non-scaling-stroke`, readable `<path>` commands & hand vs Figma workflows, `<defs>`/`<use>` reuse, SVG `transform-origin`/`transform-box: fill-box`, `stroke-dasharray`/`pathLength` self-drawing lines, and `<mask>`/`<filter>`/`useId()` scoping. (7 practices; sections: SVG Primitives, Coordinates & Paths; SVG Transforms, Masks & Filters.)
 
