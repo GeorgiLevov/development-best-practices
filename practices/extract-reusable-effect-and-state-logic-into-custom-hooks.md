@@ -4,7 +4,7 @@
 
 **When to use**: When two or more components duplicate stateful behavior, subscriptions, timers, observers, or browser-API synchronization.
 
-**Rule**: Package reusable hook logic (including `useState`, `useRef`, `useEffect`, and cleanup) into a `use`-prefixed custom hook so components stay declarative and each caller gets isolated hook state. When a custom hook attaches an observer or DOM listener to an element, create and return (or accept) the stable `ref` object—never pass `ref.current`, which is `null` on initial render and will not re-run `useEffect` dependencies when attached. Choose return signatures deliberately: return tuples (`[value, toggle]`) for 1–2 generic items callers may rename, and objects (`{ width, height }`) for 3+ named fields.
+**Rule**: A custom hook is a function whose name starts with `use` *and* that calls other hooks. Prefixing a plain helper with `use` is misleading; omitting `use` on a function that calls hooks hides stateful logic from both readers and the rules-of-hooks linter. Package reusable non-visual logic (including `useState`, `useRef`, `useEffect`, and cleanup) into a `use`-prefixed custom hook so components stay declarative, each caller gets isolated hook state, and you do not copy the same subscription between screens. When a custom hook attaches an observer or DOM listener to an element, create and return (or accept) the stable `ref` object—never pass `ref.current`, which is `null` on initial render and will not re-run `useEffect` dependencies when attached. Choose return signatures deliberately: return tuples (`[value, toggle]`) for 1–2 generic items callers may rename, and objects (`{ width, height }`) for 3+ named fields.
 
 **Example**:
 ```jsx
@@ -26,6 +26,6 @@ function useIsOnscreen() {
 }
 ```
 
-**Avoid**: Duplicating `addEventListener`/`IntersectionObserver` boilerplate across components, or passing `elRef.current` as an argument to a custom hook.
+**Avoid**: Duplicating `addEventListener`/`IntersectionObserver` boilerplate across components, passing `elRef.current` as an argument to a custom hook, or copy-pasting the same `useSyncExternalStore` / Effect block into every component that needs the value.
 
-**Source**: [Custom Hooks — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/06-custom-hooks), [Custom Hook Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/06.01-custom-hook-exercises), [Boop! Custom Hook Pattern — Josh W. Comeau](https://www.joshwcomeau.com/react/boop/)
+**Source**: [Custom Hooks — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/06-custom-hooks), [Custom Hook Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/06.01-custom-hook-exercises), [Boop! Custom Hook Pattern — Josh W. Comeau](https://www.joshwcomeau.com/react/boop/), [Creating Custom Hooks — react.gg](https://fireship.dev/c/react/custom-hooks), [Rebuilding useHooks — react.gg](https://fireship.dev/c/react/rebuilding-usehooks), [useHooks](https://usehooks.com/), [uidotdev/usehooks](https://github.com/uidotdev/usehooks)
