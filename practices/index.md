@@ -45,6 +45,13 @@
 - [Keep `::before` and `::after` content decorative only](keep-pseudo-element-content-decorative-only.md): Limit ::before/::after to decorative visuals with empty content; put meaningful text in HTML.
 - [Prefer child combinator `>` for shallow targets](prefer-child-combinator-over-descendant-for-shallow-targets.md): Use > instead of a space descendant selector when nested subcomponents must not inherit the rule.
 - [Use contextual combinators before adding extra classes](use-contextual-combinators-before-adding-classes.md): Target contextual elements with semantic ancestor combinators instead of adding classes to every tag.
+- [Adopt a modern CSS reset and own every rule](adopt-a-modern-css-reset-and-own-it.md): Start with a concise, understandable reset that protects `<dialog>` margins, media sizing, and root isolation.
+- [Use `box-sizing: border-box` universally](use-border-box-sizing-universally.md): Apply `box-sizing: border-box` to all elements and pseudo-elements so padding and borders stay inside declared sizes.
+- [Understand CSS inheritance, form control overrides, and shorthand resets](understand-css-inheritance-and-shorthand-resets.md): Inherit fonts onto form controls, avoid `inherit` in shorthands, and remember shorthands reset omitted sub-properties.
+- [Keep CSS specificity flat and rely on cascade order](manage-specificity-and-cascade-order.md): Use flat specificity and CSS stylesheet source order instead of IDs, HTML class order myths, or `!important`.
+- [Prefer CSS logical properties for directional styles](prefer-css-logical-properties-for-directional-styles.md): Use `inline`/`block` logical properties so spacing and borders adapt across LTR, RTL, and writing modes.
+- [Use `outline` or transparent borders to prevent hover/focus layout shift](use-outline-for-zero-layout-shift-highlights.md): Highlight states with `outline` or pre-reserved transparent borders instead of layout-shifting hover borders.
+- [Use `<blockquote>`, `<q>`, and `<cite>` strictly for real quotations](use-blockquote-q-and-cite-semantically.md): Reserve quote elements for genuine quotations and `<cite>` for creative works, never decorative callouts.
 
 ## Typography & Color
 
@@ -76,6 +83,11 @@
 - [Test keyboard Tab navigation across browsers](test-keyboard-tab-navigation-across-browsers.md): Test Tab focus across browsers, accounting for macOS keyboard settings and Safari focus quirks.
 - [Accessible `<button>` defaults, names, and target sizes](accessible-button-defaults-and-targets.md): Set type="button" on non-submit buttons, name icon buttons, size >= 44x44px, and check contrast.
 - [Support WCAG 1.4.12 text-spacing overrides](support-wcag-text-spacing-overrides.md): Verify layouts do not clip or overlap when users override line, paragraph, letter, and word spacing.
+- [Write descriptive link text and separate `<a href>` from `<button>`](write-descriptive-links-and-separate-links-from-buttons.md): Use `<a href>` only for navigation with standalone link copy, and `<button>` for in-page actions.
+- [Choose `VisuallyHidden`, `display: none`, or `inert` by intent](choose-visually-hidden-vs-display-none-vs-inert.md): Use `VisuallyHidden` spans for screen-reader text (better translated than `aria-label`) and `inert` to block background overlays.
+- [Escape stacking contexts for modals via native `<dialog>` or portals](use-portals-or-native-dialog-for-modals-and-overlays.md): Mount modals via `<dialog>.showModal()` or framework portals outside clipping and transformed ancestors.
+- [Never rely on color alone to communicate status or meaning](never-rely-on-color-alone-to-convey-meaning.md): Always pair color cues with text labels, icons, or patterns for color-vision accessibility.
+- [Truncate overflowing text intentionally with `ellipsis` or `line-clamp`](truncate-overflowing-text-intentionally.md): Use `ellipsis` (with `min-width: 0` in flex/grid) or `-webkit-line-clamp` only on non-critical preview text.
 
 ## Debugging & Tooling
 
@@ -86,3 +98,34 @@
 - [Embed live playgrounds in technical docs](embed-live-playgrounds-in-technical-docs.md): Embed live-editable playgrounds with Reset, Format, and isolated supporting tabs in technical docs.
 - [Sandbox and self-host live code previews](sandbox-and-self-host-live-code-previews.md): Isolate editable code previews in cross-origin iframes and watch privacy-blocker issues on static templates.
 - [Update immutable editor state via transactions](update-immutable-editor-state-via-transactions.md): Treat CodeMirror-style editor state as immutable and apply updates only via transactions.
+- [Prevent `100vw` horizontal overflow and debug overflowing boxes directly](prevent-and-debug-horizontal-overflow.md): Prefer `100%` over `100vw` and measure wide elements directly instead of masking overflow with `overflow-x: hidden` on `body`.
+- [Configure compiler plugins for readable class names, SSR IDs, and prefixes](configure-compiler-plugins-for-dev-names-and-ssr.md): Enable SWC/Babel `displayName` and `ssr` plugins and check vendor-prefix settings for properties like `backdrop-filter`.
+## Layout, Flow & Positioning
+
+- [Match `display: block`, `inline`, and `inline-block` to Flow layout rules](understand-flow-layout-block-inline-and-inline-block.md): Know which display modes honor `width`, `height`, wrapping, and vertical margins/padding in Flow layout.
+- [Use `ch` for reading line lengths and `fit-content` for intrinsic widths](use-fit-content-and-ch-for-readable-measures.md): Cap prose lines at `60ch–70ch` and shrink-wrap blocks with `fit-content` instead of fixed widths.
+- [Center constrained block elements with `margin-inline: auto`](center-block-elements-with-margin-auto.md): Center sized blocks horizontally with `margin-inline: auto` (noting vertical `auto` is `0` in Flow layout).
+- [Reserve negative margins for full-bleed or overlap effects](use-negative-margins-for-bleed-not-general-spacing.md): Use negative inline margins on `width: auto` blocks for container-bleed banners, not sloppy sibling spacing fixes.
+- [Predict and prevent unintended vertical margin collapse](predict-and-prevent-vertical-margin-collapse.md): Expect adjacent Flow vertical margins to collapse (including across parents) and isolate with `display: flow-root` or Flex/Grid.
+- [Apply vertical Flow margins in a single consistent direction](apply-vertical-margins-in-one-direction.md): Push Flow siblings consistently in one vertical direction so spacing stays predictable.
+- [Anchor `position: absolute` children with an explicit `position: relative` parent](anchor-absolute-elements-with-relative-parent.md): Explicitly mark the intended containing block `position: relative` so absolute children never drift to the root.
+- [Center sized positioned elements with `inset: 0` and `margin: auto`](center-positioned-elements-with-inset-and-margin-auto.md): Center sized `absolute`/`fixed` elements with `inset: 0; margin: auto` so `transform` remains free for motion.
+- [Understand stacking contexts before raising `z-index`](understand-stacking-contexts-before-raising-z-index.md): Check for `opacity`, `transform`, `filter`, and parent stacking contexts before escalating `z-index`.
+- [Contain `z-index` with `isolation: isolate` and DOM order](contain-z-index-with-isolation-isolate-and-dom-order.md): Rely on DOM order, small tokenized `z-index` values, and `isolation: isolate` to contain component layers.
+- [Avoid `transform` or `filter` on ancestors of `position: fixed` elements](avoid-transforms-or-filters-on-ancestors-of-fixed-elements.md): Keep `position: fixed` elements outside transformed or filtered ancestors so they stay anchored to the viewport.
+- [Prefer `overflow: clip` over `hidden` and guard `position: sticky` ancestors](prefer-overflow-clip-over-hidden-and-watch-sticky-containers.md): Use `overflow: clip` when you only want visual trimming, and keep `overflow: hidden`/`auto` off `position: sticky` ancestors.
+
+## Component Architecture & UI Patterns
+
+- [Keep external margins off reusable UI components](keep-margins-off-reusable-components.md): Let parent layouts own inter-component spacing via `gap` or `Stack` primitives instead of baking outer margins into children.
+- [Prefer component-scoped styling over global stylesheets](prefer-component-scoped-css-over-global-stylesheets.md): Choose CSS Modules, Tailwind, scoped SFC styles, or CSS-in-JS over unscoped global sheets to prevent collisions and dead CSS.
+- [Weigh runtime CSS-in-JS against zero-runtime and RSC constraints](weigh-runtime-css-in-js-vs-zero-runtime-and-rsc.md): Benchmark real SSR performance, check maintenance status, and use CSS variables instead of Context themes in RSC.
+- [Pass dynamic per-instance values via CSS custom properties](prefer-css-variables-for-dynamic-component-styles.md): Inject runtime values via `style={{ '--var': ... }}` and use `$`-props or `data-*` attributes instead of inline rules.
+- [Constrain component styles to shared design tokens and scales](constrain-styles-with-design-tokens-and-scales.md): Pick sizes, spacing, and colors from shared design-token scales instead of arbitrary pixel values.
+- [Preserve semantic HTML using polymorphic `as` or `asChild` props](preserve-semantic-html-with-polymorphic-components.md): Keep semantic tags (`<button>`, `<a>`, `<cite>`) across styled components via `as`/`asChild` or `href` switching.
+- [Design component APIs with core props, composition, and escape hatches](design-component-apis-with-core-props-composition-and-escape-hatches.md): Use a few core props, wrapper composition for one-offs, and `className`/`...delegated` forwarding as escape hatches.
+- [Keep a single source of styles with child-owned contextual rules](keep-a-single-source-of-styles-with-child-owned-context-rules.md): Co-locate common parent-context overrides inside the child component instead of reaching in from parents.
+- [Wrap unstyled accessible primitives for complex interactive widgets](prefer-unstyled-accessible-primitives-for-complex-widgets.md): Use headless primitives (Radix, React Aria, Headless UI, Ariakit) for menus, comboboxes, dialogs, and tabs.
+- [Build accessible breadcrumbs with `<nav>`, `<ol>`, `aria-current`, and CSS separators](build-accessible-breadcrumbs-with-nav-ol-and-aria-current.md): Mark breadcrumbs with `<nav aria-label="Breadcrumb">`, `<ol>`, `aria-current="page"`, and decorative CSS slashes.
+- [Build custom progress bars with `progressbar` ARIA roles and corner clipping](accessible-custom-progress-bars-and-overflow-clipping.md): Set `role="progressbar"` plus value/label ARIA attributes when `<progress>` cannot be styled, and clip fills with a rounded wrapper.
+- [Style `<select>` and file inputs by overlaying or restyling native controls](style-select-and-file-inputs-by-overlaying-or-restyling-native-controls.md): Keep native `<select>` UX via an `opacity: 0` overlay + sibling combinators or `appearance: none` + `pointer-events: none` icons.
