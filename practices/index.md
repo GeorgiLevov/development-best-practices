@@ -74,11 +74,11 @@
 
 ## JavaScript Foundations for Modern React
 
-- [JavaScript Foundations for Modern React index](index-javascript.md): `const` assignment vs mutation and shallow spread, declarative array methods vs premature `for` optimizations, falsy edge cases and `??`, ES module scope, readable timers and symmetric/outside-click listeners, and `fetch` `response.ok` + `AbortController` race cancellation. (6 practices; sections: Data, Immutability, Scope & Control Flow; Timers, Events & Async Networking.)
+- [JavaScript Foundations for Modern React index](index-javascript.md): `const` assignment vs mutation and shallow spread, `const`/`let` vs function-scoped `var` and the temporal dead zone, declarative array methods vs premature `for` optimizations, falsy edge cases and `??`, destructuring and option bags, shorthand and computed object keys, template literals, lexical-`this` arrows, default parameters, ES module scope (IIFEs/CommonJS/`import()`), ES6 classes and `#` private fields, Stage 4 ECMAScript proposals, readable timers and symmetric/outside-click listeners, `fetch` `response.ok` + `AbortController` race cancellation, and `async`/`await` over nested callbacks. (16 practices; sections: Data, Immutability, Scope & Control Flow; Syntax & Functions; Modules, Classes & Language Evolution; Timers, Events & Async Networking.)
 
 ## Career, Engineering Process & Tooling
 
-- [Career, Engineering Process & Tooling index](index-career-and-tooling.md): Terminal fluency, lean editor/Prettier/ESLint setup, Node LTS/`nvm`/npm scripts, transpiler vs bundler mental models without decision paralysis, guided vs unguided learning to escape tutorial hell, tailored hiring-funnel applications, portfolio engineering case studies, and structured technical interviews. (8 practices; sections: Engineering Workflow & Tooling; Learning, Portfolio & Technical Interviews.)
+- [Career, Engineering Process & Tooling index](index-career-and-tooling.md): Terminal fluency, lean editor/Prettier/ESLint setup, Node LTS/`nvm`/npm scripts, transpiler vs bundler mental models (including compile vs polyfill) without decision paralysis, guided vs unguided learning to escape tutorial hell, tailored hiring-funnel applications, portfolio engineering case studies, and structured technical interviews. (8 practices; sections: Engineering Workflow & Tooling; Learning, Portfolio & Technical Interviews.)
 
 ## Animation Craft, Procedural Motion & Advanced Interactions
 
