@@ -44,6 +44,7 @@
 - [Prefer `overflow: clip` over `hidden` and guard `position: sticky` ancestors](prefer-overflow-clip-over-hidden-and-watch-sticky-containers.md): Use `overflow: clip` when you only want visual trimming, and keep `overflow: hidden`/`auto` off `position: sticky` ancestors.
 - [Wrap text around images and shapes with `shape-outside`](wrap-text-around-shapes-with-shape-outside.md): Float with `inline-start` and wrap prose around circles, polygons, or image alpha.
 - [Contain floats with `display: flow-root` or a clearfix](contain-floats-with-flow-root-or-a-clearfix.md): Make parents wrap floated children with `display: flow-root` or a clearfix.
+- [Separate `position: sticky` tracks from `overflow: hidden` content containers](separate-sticky-tracks-from-overflow-hidden-siblings.md): Keep `position: sticky` rails in a parallel unclipped wrapper when the main content container uses `overflow: hidden`.
 
 ## Flexbox Layout
 
@@ -58,6 +59,7 @@
 - [Prevent overstuffed centered flex containers from clipping start items](prevent-overstuffed-centered-flex-scroll-clipping.md): Use `margin: auto` or `safe center` instead of bare `justify-content: center` on overflowing scrollable flex boxes.
 - [Apply `border-radius` directly to images instead of clipping card wrappers](round-image-corners-directly-to-preserve-overflowing-badges.md): Round `<img>` corners directly so overlapping badges, flags, or focus rings are not sliced off by `overflow: hidden`.
 - [Build custom radio and checkbox tiles by overlaying native inputs](style-custom-radio-and-checkbox-tiles-with-overlay-inputs.md): Keep native keyboard and form UX by stretching `appearance: none` inputs over `<label>` tiles via `inset: 0`.
+- [True-center a middle header slot with symmetric `flex: 1` sides or `1fr auto 1fr`](center-middle-header-item-with-symmetric-flex-or-grid-tracks.md): True-center a header's middle nav or logo using symmetric `flex: 1` sides or a `1fr auto 1fr` grid.
 
 ## CSS Grid Layout
 
@@ -73,6 +75,7 @@
 - [Build full-bleed editorial layouts with a 3-column CSS Grid](build-full-bleed-article-grids-with-three-columns.md): Center prose in `1fr min(65ch, 100%) 1fr` and stretch `.full-bleed` breaks across `1 / -1` with negative `--breathing-room` margins.
 - [Enable `position: sticky` and predict `z-index` / margins in CSS Grid](enable-sticky-children-and-z-index-in-css-grid.md): Add `align-self: start` on sticky grid items, skip `position: relative` for `z-index`, and virtualize large grids.
 - [Share parent tracks with `subgrid` and reserve explicit subgrid spans](share-parent-tracks-with-css-subgrid-and-reserve-rows.md): Align nested components via `subgrid` (~94.7% support, `@supports` fallback) while explicitly reserving `span N` rows/columns.
+- [Wrap `-webkit-line-clamp` text in a plain container inside CSS Grid layouts](wrap-line-clamped-text-inside-css-grid-items.md): Put `grid-area` on a wrapper `<div>` rather than directly on a `-webkit-line-clamp` element.
 
 ## Responsive & Behavioural CSS
 
@@ -88,3 +91,5 @@
 - [Build zoom-safe fluid typography with `clamp()`, `vw`, and `rem`](build-zoom-safe-fluid-typography-with-clamp-and-rem.md): Pair `vw` with a positive `rem` offset inside `clamp()` so fluid headings still scale at 200% browser zoom.
 - [Use container queries with `container-type: inline-size` and named containers](use-container-queries-with-inline-size-and-named-containers.md): Measure component containers with `inline-size` (not `size`), optionally name them, and style children with `@container`.
 - [Bundle interdependent fallbacks with `@supports` feature queries](bundle-progressive-enhancement-with-supports-feature-queries.md): Let single properties degrade silently; use `@supports` only when multiple declarations depend on a feature.
+- [Use `revert` in media queries to undo inherited layout, flex, or divider rules](use-revert-in-media-queries-to-reset-layout-and-dividers.md): Reset overridden properties cleanly at breakpoints using `revert` instead of guessing default values.
+- [Pair a fluid `clamp()` gap with local `overflow: auto` for resilient navigation bars](fluid-gap-and-scroll-fallback-for-nav-localization.md): Pair a `clamp()` fluid `gap` with local `overflow: auto` on nav bars so longer translations don't overflow the page.

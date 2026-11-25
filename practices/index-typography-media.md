@@ -32,6 +32,8 @@
 - [Theme `::selection` highlights through CSS variables](theme-selection-highlights-with-css-variables.md): Use one global `::selection` rule fed by per-section CSS variables.
 - [Tint native checkboxes, radios, ranges, and progress with `accent-color`](tint-native-form-controls-with-accent-color.md): Brand checkboxes, radios, ranges, and progress with `accent-color` instead of rebuilding them.
 - [Align text optically and step outside spacing tokens when needed](align-text-optically-and-break-spacing-tokens-when-needed.md): Trim text boxes, nudge glyphs, and use bespoke offsets for perceived alignment.
+- [Clamp tag lists to one ellipsis line with `display: inline` items, not Flexbox](ellipsis-tag-lists-with-inline-items-not-flex.md): Use `display: inline` items inside a `white-space: nowrap; overflow: hidden; text-overflow: ellipsis;` list instead of Flexbox.
+- [Declare the root `font-family` on `html`, not inside the `*` universal selector](declare-root-font-family-on-html-not-universal-selector.md): Set the base `font-family` on `html` (or `body`) rather than `*` so inheritance stays easy to override.
 
 ## Units & Accessibility
 
@@ -65,6 +67,7 @@
 - [Size proportional media, videos, and iframes with `aspect-ratio`](reserve-media-proportions-with-aspect-ratio.md): Use CSS `aspect-ratio` (~97.2% support) with `object-fit: cover` instead of `padding-bottom` wrapper hacks.
 - [Serve high-DPI AVIF/WebP images with `srcset` and `<picture>`](serve-responsive-avif-webp-images-with-srcset-and-picture.md): Provide `1x`/`2x`/`3x` candidates via `srcset` and ordered AVIF/WebP fallbacks via `<picture>` (or `next/image`).
 - [Reserve `background-image` for tiling patterns and crisp high-DPI surfaces](reserve-background-image-for-tiling-and-decorative-surfaces.md): Use `background-image` for repeating patterns or decorative textures, pairing `min-resolution` with explicit `1x` `background-size`.
+- [Give positioned or standalone `<svg>` elements explicit dimensions to prevent collapse](give-positioned-svgs-explicit-dimensions-to-prevent-collapse.md): Give `position: fixed`/`absolute` or standalone `<svg>` illustrations explicit `width`/`height` so they don't collapse to zero.
 
 ## Visual Effects: Filters, Shadows, Gradients & Shapes
 
