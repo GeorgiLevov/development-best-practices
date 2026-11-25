@@ -16,6 +16,6 @@ React.useEffect(() => {
 }, []);
 ```
 
-**Avoid**: Reading stale `seconds` inside a `[]`-dependency interval or listener (`setSeconds(seconds + 1)` freezes at `1`), or adding rapidly changing state to an effect's dependencies solely to read its current value when a functional updater suffices.
+**Avoid**: Reading stale `seconds` inside a `[]`-dependency interval or listener (`setSeconds(seconds + 1)` freezes at `1`), adding rapidly changing state to an effect's dependencies solely to read its current value when a functional updater suffices, or omitting a reactive value from the dependency array instead of a functional updater, `dispatch`, or (in React 19.2+) `useEffectEvent` when the value is not part of the synchronization.
 
-**Source**: [Stale Values — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/05.08-stale-values), [State Setter Callbacks — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/05.08.B-state-setter-callback), [State as a Snapshot — React Docs](https://react.dev/learn/state-as-a-snapshot)
+**Source**: [Stale Values — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/05.08-stale-values), [State Setter Callbacks — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/05.08.B-state-setter-callback), [State as a Snapshot — React Docs](https://react.dev/learn/state-as-a-snapshot), [Why React Renders — react.gg](https://fireship.dev/c/react/renders), [Abstracting Reactive Values with useEffectEvent — react.gg](https://fireship.dev/c/react/useeffectevent)
