@@ -30,8 +30,12 @@
 
 ## UI Engineering: Components, Interaction & Motion
 
-- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (43 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
+- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (45 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
+
+## React Fundamentals, State & Forms
+
+- [React Fundamentals, State & Forms index](index-react.md): JSX, components, keys, conditional rendering, `useState`, render/commit, events, forms, and state architecture. (16 practices; sections: JSX, Components & Rendering; State, Events & Forms.)
 
 ## Developer Mindset, Debugging & Tooling
 
-- [Developer Mindset, Debugging & Tooling index](index-developer-mindset.md): Learning habits, debugging strategy, and DevTools workflows. (17 practices; sections: Developer Mindset & Learning; Debugging & Tooling.)
+- [Developer Mindset, Debugging & Tooling index](index-developer-mindset.md): Learning habits, debugging strategy, and DevTools workflows. (19 practices; sections: Developer Mindset & Learning; Debugging & Tooling.)
