@@ -1,6 +1,6 @@
 > Full index: [index.md](index.md)
 
-# Animation Craft, Particles & Procedural Motion
+# Animation Craft, Procedural Motion & Advanced Interactions
 
 > Sub-index of the Development Best Practices collection. Open only the files that match the task.
 
@@ -26,3 +26,11 @@
 - [Build self-resetting "boop" nudges and subtle icon squash-and-stretch micro-interactions](build-ephemeral-boop-microinteractions-and-squash-stretch.md): Reset playful icon nudges after `~150ms` (`boop`), apply subtle volume-conserving squash-and-stretch, and use Motion for Safari-safe SVG `d` morphs.
 - [Choreograph nested `transform-origin` joints, staggered dropdown reveals, and asymmetric spring damping](choreograph-nested-transform-joints-staggers-and-asymmetric-springs.md): Layer parent/child joint pivots with overlapping delays, stagger popovers `30%–70%` (`<500ms`) reversed at `~2x` on exit, and lower damping on release.
 - [Add subtle UI sound effects with audio sprites, `use-sound`/Howler, and explicit mute controls](add-tasteful-ui-sound-effects-with-sprites-and-mute-controls.md): Keep UI SFX `<1s`, quiet (`~0.25`), gesture-triggered, preloaded, varied via audio sprites or `playbackRate`, and gated by an explicit UI mute control.
+
+## Pointer Tracking, Scroll & View Transitions
+
+- [Track the cursor safely with stable bounds, throttled rects, and SVG `viewBox` mapping](track-cursor-safely-with-throttled-bounds-and-svg-mapping.md): Measure unmoving outer wrappers (never mutating targets), throttle `.getBoundingClientRect()`, convert `NodeList`s, map coordinates to SVG `viewBox`, and guard reduced motion/touch/focus.
+- [Build scroll-driven animations and parallax with CSS `animation-timeline`, `view()`, and `scroll()`](build-scroll-driven-animations-with-animation-timeline-and-view.md): Scrub scroll and parallax natively with `scroll(root block)`/`view()`, tune `animation-range-start/end` + `backwards` fill, and wrap spatial scroll effects in reduced-motion guards.
+- [Trigger threshold-based scroll entrances with `IntersectionObserver` and progressive `animation-trigger`](trigger-scroll-animations-with-intersection-observer-and-animation-trigger.md): Use `IntersectionObserver` (`rootMargin`, `threshold`, `unobserve`) for one-shot scroll reveals until CSS `timeline-trigger`/`animation-trigger` lands broadly, keeping reduced-motion content visible.
+- [Animate DOM mutations with same-document View Transitions, classes, and interrupt-safe hit targets](animate-dom-changes-with-same-document-view-transitions.md): Feature-detect `startViewTransition`, respect reduced motion, group elements with `view-transition-class`/`match-element`, and disable `:root` capture + `::view-transition` pointer-events so controls stay clickable.
+- [Handle View Transition transforms, aspect-ratio shifts, cross-document routes, and React `<ViewTransition>`](handle-view-transition-transforms-cross-document-and-react.md): Avoid `transform` on `::view-transition-group`, fix aspect-ratio warps (`fit-content`, split layers, `overflow: clip`), inline `@view-transition` in `<head>` for MPAs, and integrate React `<ViewTransition>` cleanly.
