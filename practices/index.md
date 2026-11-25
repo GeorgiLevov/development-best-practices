@@ -50,4 +50,12 @@
 
 ## Full-Stack React, Next.js & Server Architecture
 
-- [Full-Stack React, Next.js & Server Architecture index](index-react-fullstack.md): Rendering paradigms (CSR/SSR/SSG/ISR), React Server Components, `'use client'` boundary minimization, SSR hydration safety, App Router & Next 15+ async APIs, persistent layout state, bundle analysis, static/dynamic rendering, `generateMetadata` & `React.cache`, Streaming SSR & Suspense, `next/dynamic` facades, and flicker-free SSR dark mode. (12 practices; sections: Rendering Models, RSCs & Client Boundaries; App Router, State Persistence & Static/Dynamic Builds; Metadata, Caching, Streaming & Lazy Loading.)
+- [Full-Stack React, Next.js & Server Architecture index](index-react-fullstack.md): Rendering paradigms (CSR/SSR/SSG/ISR), React Server Components, `'use client'` boundary minimization, SSR hydration safety, App Router & Next 15+ async APIs, persistent layout state, bundle analysis, static/dynamic rendering, `generateMetadata` & `React.cache`, Streaming SSR & Suspense, `next/dynamic` facades, and flicker-free SSR dark mode. (14 practices; sections: Rendering Models, RSCs & Client Boundaries; App Router, State Persistence & Static/Dynamic Builds; Metadata, Caching, Streaming & Lazy Loading.)
+
+## JavaScript Foundations for Modern React
+
+- [JavaScript Foundations for Modern React index](index-javascript.md): `const` assignment vs mutation and shallow spread, declarative array methods vs premature `for` optimizations, falsy edge cases and `??`, ES module scope, readable timers and symmetric/outside-click listeners, and `fetch` `response.ok` + `AbortController` race cancellation. (6 practices; sections: Data, Immutability, Scope & Control Flow; Timers, Events & Async Networking.)
+
+## Career, Engineering Process & Tooling
+
+- [Career, Engineering Process & Tooling index](index-career-and-tooling.md): Terminal fluency, lean editor/Prettier/ESLint setup, Node LTS/`nvm`/npm scripts, transpiler vs bundler mental models without decision paralysis, guided vs unguided learning to escape tutorial hell, tailored hiring-funnel applications, portfolio engineering case studies, and structured technical interviews. (8 practices; sections: Engineering Workflow & Tooling; Learning, Portfolio & Technical Interviews.)
