@@ -12,6 +12,7 @@
 
 ## Generative Techniques, Workers & React
 
-- [Render Canvas trails, trig/Simplex motion, multi-canvas glows, and Safari-safe connected dots](render-canvas-trails-trigonometry-noise-glows-and-connected-lines.md): Layer semi-transparent trail wipes, `Math.sin`/`cos` & Simplex noise fields, blurred secondary glow canvases, and `0.01`-nudged round-cap lines for Safari.
+- [Render Canvas trails, trig/Simplex motion, multi-canvas glows, and Safari-safe connected dots](render-canvas-trails-trigonometry-noise-glows-and-connected-lines.md): Layer semi-transparent trail wipes, `Math.sin`/`cos` & Simplex noise fields (including hover-ripple rings that retract on pointer leave), blurred secondary glow canvases, and `0.01`-nudged round-cap lines for Safari.
 - [Offload CPU-heavy Canvas loops to Web Workers with `OffscreenCanvas`](offload-heavy-canvas-rendering-to-workers-with-offscreencanvas.md): Transfer canvas ownership once with `transferControlToOffscreen()`, forward DPR/resize messages from the main thread, and run `requestAnimationFrame` in the Worker.
 - [Encapsulate Canvas DPR setup, `rAF` loops, and `OffscreenCanvas` guards cleanly in React](encapsulate-canvas-setup-and-animation-loops-in-react.md): Isolate DPR/resize/`deltaTime` in `<Canvas>`/`useRequestAnimationFrameLoop`, keep frame state in `useRef`, and guard StrictMode with `hasTransferredRef`.
+- [Paint Canvas cells with a locked drag mode and a decoupled simulation tick](paint-canvas-cells-with-locked-drag-and-decoupled-simulation-ticks.md): Map pointers through `getBoundingClientRect()`, lock paint vs erase for the whole drag, and step the automaton on its own interval instead of inside `rAF`.
