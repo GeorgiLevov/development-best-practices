@@ -59,3 +59,8 @@
 ## Career, Engineering Process & Tooling
 
 - [Career, Engineering Process & Tooling index](index-career-and-tooling.md): Terminal fluency, lean editor/Prettier/ESLint setup, Node LTS/`nvm`/npm scripts, transpiler vs bundler mental models without decision paralysis, guided vs unguided learning to escape tutorial hell, tailored hiring-funnel applications, portfolio engineering case studies, and structured technical interviews. (8 practices; sections: Engineering Workflow & Tooling; Learning, Portfolio & Technical Interviews.)
+
+## Animation Craft, Particles & Procedural Motion
+
+- [Animation Craft, Particles & Procedural Motion index](index-animation.md): Partial and CSS-variable `@keyframes`, symmetrical/contained particle positioning, polar coordinates and CSS trig dispersion, linear/exponential interpolation (`normalize`/`clamp`), batched cleanup vs DOM pooling, custom easing curves and bespoke "juice", `filter: hue-rotate()` color shifting, and reduced-motion alternatives/controls. (8 practices; sections: Keyframes, Geometry & Interpolation; Performance, Juice, Color & Motion Accessibility.)
+
