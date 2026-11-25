@@ -15,6 +15,7 @@
 - [Learn in public for retention and accountability](learn-in-public-for-accountability.md): Share small demos, notes, and progress publicly to reinforce learning and accountability.
 
 - [Prefer simple, readable code over clever CSS or JS tricks](prefer-simple-readable-code-over-clever-tricks.md): Write straightforward, maintainable CSS and isolate unavoidable complexity instead of shipping clever one-liners.
+- [Work within a new framework's abstraction instead of fighting it](work-within-a-frameworks-abstraction-instead-of-fighting-it.md): Learn a framework's declarative mental model instead of forcing old imperative DOM habits onto it.
 
 ## Debugging & Tooling
 
@@ -27,3 +28,4 @@
 - [Update immutable editor state via transactions](update-immutable-editor-state-via-transactions.md): Treat CodeMirror-style editor state as immutable and apply updates only via transactions.
 - [Prevent `100vw` horizontal overflow and debug overflowing boxes directly](prevent-and-debug-horizontal-overflow.md): Prefer `100%` over `100vw` and measure wide elements directly instead of masking overflow with `overflow-x: hidden` on `body`.
 - [Configure compiler plugins for readable class names, SSR IDs, and prefixes](configure-compiler-plugins-for-dev-names-and-ssr.md): Enable SWC/Babel `displayName` and `ssr` plugins and check vendor-prefix settings for properties like `backdrop-filter`.
+- [Measure performance before optimizing intuition-based bottlenecks](measure-performance-before-optimizing.md): Benchmark suspicious paths with `console.time()` and low-end hardware against ~100ms thresholds before sacrificing readability.

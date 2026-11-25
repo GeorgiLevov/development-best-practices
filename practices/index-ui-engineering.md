@@ -24,6 +24,8 @@
 - [Pad leading-icon inputs inside a `<label>` wrapper and forward `id` on custom selects](pad-leading-icon-inputs-and-wrap-with-label.md): Wrap icon inputs in `<label>`, pad `padding-left` for the icon box, forward `id` on custom `<Select>`, and validate size props.
 - [Prefer uncontrolled accessible dialogs for self-contained trigger/close drawers](use-uncontrolled-accessible-dialogs-for-self-contained-toggles.md): Let accessible dialog primitives own open state (`Trigger`/`Close`) when nothing external toggles them, and include `Title`/`Description`.
 - [Group sibling JSX elements with React Fragments (`<>...</>`) instead of extra `<div>`s](group-top-level-elements-with-react-fragments.md): Return `<>...</>` React Fragments instead of wrapper `<div>`s so sibling nodes don't break CSS or HTML structure.
+- [Use `<dl>`, `<dt>`, and `<dd>` for key-value metadata pairs](use-description-lists-for-key-value-metadata.md): Wrap structured label-value metadata in semantic `<dl>`/`<dt>`/`<dd>` lists instead of generic `<div>`/`<span>` pairs.
+- [Keep submit buttons clickable and explain validation errors](keep-submit-buttons-clickable-and-explain-validation-errors.md): Avoid `disabled` submit buttons that hide why submission fails; let users click and show clear validation feedback.
 
 ## Interaction, Focus & Scrolling
 
