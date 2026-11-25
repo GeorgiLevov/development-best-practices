@@ -54,6 +54,7 @@
 - [Prefer CSS logical properties for directional styles](prefer-css-logical-properties-for-directional-styles.md): Use `inline`/`block` logical properties so spacing and borders adapt across LTR, RTL, and writing modes.
 - [Use `outline` or transparent borders to prevent hover/focus layout shift](use-outline-for-zero-layout-shift-highlights.md): Highlight states with `outline` or pre-reserved transparent borders instead of layout-shifting hover borders.
 - [Use `<blockquote>`, `<q>`, and `<cite>` strictly for real quotations](use-blockquote-q-and-cite-semantically.md): Reserve quote elements for genuine quotations and `<cite>` for creative works, never decorative callouts.
+- [Inherit border, outline, and icon colors with `currentColor`](inherit-border-color-with-currentcolor.md): Omit `border-color` (or pass `currentColor`) so borders, outlines, and SVG strokes track computed text `color`.
 
 ## Typography & Color
 
@@ -143,6 +144,8 @@
 - [Build accessible breadcrumbs with `<nav>`, `<ol>`, `aria-current`, and CSS separators](build-accessible-breadcrumbs-with-nav-ol-and-aria-current.md): Mark breadcrumbs with `<nav aria-label="Breadcrumb">`, `<ol>`, `aria-current="page"`, and decorative CSS slashes.
 - [Build custom progress bars with `progressbar` ARIA roles and corner clipping](accessible-custom-progress-bars-and-overflow-clipping.md): Set `role="progressbar"` plus value/label ARIA attributes when `<progress>` cannot be styled, and clip fills with a rounded wrapper.
 - [Style `<select>` and file inputs by overlaying or restyling native controls](style-select-and-file-inputs-by-overlaying-or-restyling-native-controls.md): Keep native `<select>` UX via an `opacity: 0` overlay + sibling combinators or `appearance: none` + `pointer-events: none` icons.
+- [Account for `overflow` axis coercion and positioned containing blocks](understand-overflow-axis-coercion-and-positioned-clipping.md): Use `overflow-x: clip` (since `hidden` forces `overflow-y: auto`) and match containing blocks when clipping `absolute` items.
+- [Distinguish `visibility: hidden`, `opacity: 0`, and `display: none`](understand-visibility-hidden-vs-opacity-zero-vs-display-none.md): Never rely on `opacity: 0` alone to hide interactive UI; pair with `visibility: hidden` or `inert`.
 
 ## Flexbox Layout
 
@@ -156,6 +159,7 @@
 - [Fix non-sticking `position: sticky` flex children with `align-self: flex-start`](fix-sticky-elements-in-flex-containers-with-align-self-start.md): Prevent Flexbox's default `stretch` alignment from locking a sticky sidebar to full container height.
 - [Prevent overstuffed centered flex containers from clipping start items](prevent-overstuffed-centered-flex-scroll-clipping.md): Use `margin: auto` or `safe center` instead of bare `justify-content: center` on overflowing scrollable flex boxes.
 - [Apply `border-radius` directly to images instead of clipping card wrappers](round-image-corners-directly-to-preserve-overflowing-badges.md): Round `<img>` corners directly so overlapping badges, flags, or focus rings are not sliced off by `overflow: hidden`.
+- [Build custom radio and checkbox tiles by overlaying native inputs](style-custom-radio-and-checkbox-tiles-with-overlay-inputs.md): Keep native keyboard and form UX by stretching `appearance: none` inputs over `<label>` tiles via `inset: 0`.
 
 ## Responsive & Behavioural CSS
 
@@ -181,3 +185,31 @@
 - [Size proportional media, videos, and iframes with `aspect-ratio`](reserve-media-proportions-with-aspect-ratio.md): Use CSS `aspect-ratio` (~97.2% support) with `object-fit: cover` instead of `padding-bottom` wrapper hacks.
 - [Serve high-DPI AVIF/WebP images with `srcset` and `<picture>`](serve-responsive-avif-webp-images-with-srcset-and-picture.md): Provide `1x`/`2x`/`3x` candidates via `srcset` and ordered AVIF/WebP fallbacks via `<picture>` (or `next/image`).
 - [Reserve `background-image` for tiling patterns and crisp high-DPI surfaces](reserve-background-image-for-tiling-and-decorative-surfaces.md): Use `background-image` for repeating patterns or decorative textures, pairing `min-resolution` with explicit `1x` `background-size`.
+
+## CSS Grid Layout
+
+- [Choose CSS Grid for 2D tracks, consistent columns, and layered cells](choose-css-grid-for-2d-tracks-and-overlapping-layers.md): Treat Grid tracks as invisible CSS markers and overlap items in one cell without `position: absolute`.
+- [Define grid tracks with `fr`, `repeat()`, `gap`, and explicit vs implicit sizing](build-explicit-grid-tracks-with-fr-repeat-and-gap.md): Use `fr`, `repeat()`, and `gap` (~97.4% support) for flexible tracks instead of hard `%` limits that overflow.
+- [Align grid tracks vs cell items with `*-content`, `*-items`, `*-self`, and `place-*`](align-grid-tracks-and-cells-with-content-items-and-place.md): Separate container track alignment (`*-content`) from cell alignment (`*-items`/`*-self`) and center with `place-content: center`.
+- [Map page shells and responsive rearrangements with `grid-template-areas`](name-grid-regions-with-grid-template-areas.md): Name rectangular Grid regions with `grid-template-areas` so layout rearrangements happen on the parent rule.
+- [Place and span grid items with line numbers, `1 / -1`, `span`, and `dense`](place-and-span-grid-items-with-lines-span-and-dense.md): Use `1 / -1` for future-proof full-span tracks, `span N` for featured cards, and `dense` only when order isn't critical.
+- [Keep Grid DOM order logical and layer `reading-flow` when layouts reorder](keep-grid-dom-order-logical-and-use-reading-flow.md): Match DOM order to visual order first, adding `reading-flow` (~72.8% support) progressively instead of positive `tabindex`.
+- [Build fluid card grids with `auto-fill`, `minmax()`, and `min()`](build-fluid-card-grids-with-auto-fill-minmax-and-min.md): Use `repeat(auto-fill, minmax(min(320px, 100%), 1fr))` for zero-overflow fluid grids, choosing `auto-fill` vs `auto-fit` intentionally.
+- [Draw grid dividers via gap-exposed backgrounds or selective cell borders](draw-grid-dividers-with-background-gaps-and-inset-borders.md): Use container `background-color` + `gap` or selective borders cross-browser since CSS `rule` (~67.6%) is Chromium-only.
+- [Prevent CSS Grid blowout with `minmax(0, 1fr)` or child `overflow: auto`](prevent-grid-blowout-with-minmax-zero-and-overflow.md): Stop wide children from expanding `1fr` tracks using `minmax(0, 1fr)`, `min-width: 0`, or `overflow: auto` on direct grid children.
+- [Build full-bleed editorial layouts with a 3-column CSS Grid](build-full-bleed-article-grids-with-three-columns.md): Center prose in `1fr min(65ch, 100%) 1fr` and stretch `.full-bleed` breaks across `1 / -1` with negative `--breathing-room` margins.
+- [Enable `position: sticky` and predict `z-index` / margins in CSS Grid](enable-sticky-children-and-z-index-in-css-grid.md): Add `align-self: start` on sticky grid items, skip `position: relative` for `z-index`, and virtualize large grids.
+- [Share parent tracks with `subgrid` and reserve explicit subgrid spans](share-parent-tracks-with-css-subgrid-and-reserve-rows.md): Align nested components via `subgrid` (~94.7% support, `@supports` fallback) while explicitly reserving `span N` rows/columns.
+
+## Animations & Motion
+
+- [Master CSS `transform` order, percentages, `transform-origin`, and inline limits](understand-css-transforms-order-origin-and-inline-gotcha.md): Remember right-to-left transform chaining, self-relative `translate(%)`, `transform-origin`, and `inline-block` for `<span>`.
+- [Transition explicit properties with purposeful easing and `200ms–500ms` durations](animate-specific-properties-with-natural-easing-curves.md): Avoid `transition: all`, choose `ease-out`/`ease-in`/`ease-in-out` intentionally, and target `200ms–500ms`.
+- [Prevent hover "doom flicker" by separating trigger and animated target](prevent-hover-doom-flicker-by-separating-trigger-and-target.md): Attach `:hover`/`:focus` to a stationary wrapper element and apply `transform` transitions to a child.
+- [Use `@keyframes` for mount, looped, multi-step, and pausable animations](use-keyframes-for-loops-multi-step-and-pausable-motion.md): Use `animation-direction: alternate`, keep `delay` out of the shorthand, and scope keyframes with `styled-components` or unique names.
+- [Persist pre-delay and post-end keyframe states with `animation-fill-mode`](persist-keyframe-states-with-animation-fill-mode.md): Apply `animation-fill-mode: both` (or `forwards`/`backwards`) so delayed or finite keyframes never flash or snap back.
+- [Tailor action-driven transitions and stagger orchestrated sequences](compose-action-driven-and-orchestrated-animations.md): Vary enter/exit and hover/active/cancel motion by user action, and isolate staggered timelines in helpers.
+- [Animate composited properties and apply `will-change` intentionally](animate-composited-properties-and-use-will-change-sparingly.md): Prefer `transform`, `opacity`, and `filter` for 60fps frames, use `will-change` selectively, and test on budget mobile hardware.
+- [Opt into motion with `prefers-reduced-motion: no-preference`](opt-in-to-motion-with-prefers-reduced-motion.md): Gate spatial motion inside `no-preference` media/JS checks instead of wildcard `0.01ms` hacks, and test with Reduce Motion on.
+- [Share `perspective`, chain `preserve-3d`, and isolate flattening properties](configure-3d-perspective-preserve-3d-and-avoid-flattening.md): Forward `preserve-3d` through every intermediate wrapper and keep `overflow`/`opacity`/`filter` on an outer shell.
+- [Default to CSS/WAAPI and reserve JS animation libraries for springs or FLIP](choose-css-waapi-or-js-animation-libraries-by-need.md): Prefer zero-bundle off-main-thread CSS/WAAPI, reach for Motion/React Spring/GSAP only when needed, and `aria-hidden` duplicate text.
