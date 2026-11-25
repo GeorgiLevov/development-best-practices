@@ -4,7 +4,7 @@
 
 **When to use**: When choosing or structuring CSS architecture in a component-driven frontend app.
 
-**Rule**: Default to a styling tool that scopes rules to components automatically—such as CSS Modules, Tailwind utility classes, Vue/Svelte `<style scoped>`, or CSS-in-JS—rather than relying purely on global `.css` sheets and manual BEM naming discipline, so refactoring or deleting a component removes its styles safely without naming collisions.
+**Rule**: In a component-driven app, default to a styling tool that scopes rules to components automatically—such as CSS Modules, Tailwind utility classes, Vue/Svelte `<style scoped>`, or CSS-in-JS—rather than relying purely on global `.css` sheets and manual BEM naming discipline, so refactoring or deleting a component removes its styles safely without naming collisions. That default does not rule out a **layered global Sass architecture** (abstracts, base, components, layout, utilities, vendor) for multi-page marketing or content sites, where a shared system and generated utilities are the point—see the CSS architecture index.
 
 **Example**:
 ```jsx
@@ -17,4 +17,4 @@ export function Card({ children }) {
 
 **Avoid**: Authoring unscoped global `.wrapper` or `.title` rules across a growing multi-author codebase.
 
-**Source**: [Ecosystem World Tour — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/03-components/02-ecosystem-world-tour), [PostCSS](https://postcss.org/)
+**Source**: [Ecosystem World Tour — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/03-components/02-ecosystem-world-tour), [PostCSS](https://postcss.org/), [Architecture — Beyond CSS](https://module-3.beyondcss.dev/lessons/architecture)
