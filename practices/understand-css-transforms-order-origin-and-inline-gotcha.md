@@ -4,7 +4,7 @@
 
 **When to use**: When moving, scaling, rotating, or skewing elements without disturbing surrounding layout.
 
-**Rule**: Use `transform` (`translate`, `scale`, `rotate`, `skew`) for layout-free visual transforms, noting percentages inside `translate()` resolve against the element's *own* width/height (ideal with `calc(100% + offset)`). Remember chained transforms apply right-to-left (so `rotate(...) translateX(...)` orbits around `transform-origin`), prefer `transform-origin` to set pivot points, and switch inline `<span>` elements to `inline-block`/`flex`/`grid` because Flow inline elements ignore transforms.
+**Rule**: Use `transform` (`translate`, `scale`, `rotate`, `skew`) for layout-free visual transforms, noting percentages inside `translate()` resolve against the element's *own* width/height (ideal with `calc(100% + offset)`). Remember chained transforms apply right-to-left (so `rotate(...) translateX(...)` orbits around `transform-origin`), prefer `transform-origin` to set pivot points, and switch inline `<span>` elements to `inline-block`/`flex`/`grid` because Flow inline elements ignore transforms. When two simultaneous keyframes would clobber the same `transform` property, see [Use standalone `translate`, `rotate`, and `scale` when two keyframes must not clobber each other](use-standalone-translate-rotate-scale-for-independent-keyframes.md).
 
 **Example**:
 ```css
@@ -20,4 +20,4 @@
 
 **Avoid**: Applying `transform: rotate(...)` to a bare `<span>` in Flow layout or reversing `translateX` and `rotate` order without checking how `transform-origin` pivots.
 
-**Source**: [Transforms — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/08-animations/01-transforms), [Create Diagonal Layouts — 9elements](https://9elements.com/blog/create-diagonal-layouts-like-it-s-2020/)
+**Source**: [Transforms — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/08-animations/01-transforms), [Transform Functions — Whimsical Animations](https://courses.joshwcomeau.com/wham/animation-primer/02-transform-functions), [Transform Origin — Whimsical Animations](https://courses.joshwcomeau.com/wham/animation-primer/02.01-transform-origin), [Create Diagonal Layouts — 9elements](https://9elements.com/blog/create-diagonal-layouts-like-it-s-2020/)
