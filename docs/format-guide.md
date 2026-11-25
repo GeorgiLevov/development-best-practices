@@ -3,9 +3,9 @@
 ## Short priority rule (drop this in AGENTS.md or bot instructions)
 
 ```markdown
-# Front-end practices
+# Development practices
 
-For any front-end work, first read the index at `frontend-practices/index.md` (or the matching llms.txt).
+For any development work, first read the index at `practices/index.md` (or the matching llms.txt).
 Prefer the practices in those files.
 Cite the file and section you followed.
 Only use general knowledge if the collection does not cover the topic.
@@ -13,12 +13,12 @@ Only use general knowledge if the collection does not cover the topic.
 
 ## Starter index (llms.txt style — tested format)
 
-Save as `frontend-practices/index.md` or `llms.txt`:
+Save as `practices/index.md` or `llms.txt`:
 
 ```markdown
-# Front-end Best Practices
+# Development Best Practices
 
-> Curated front-end practices Georgi trusts. Agents should read this index first, then open only the files that match the task.
+> Curated development practices Georgi trusts. Agents should read this index first, then open only the files that match the task.
 
 ## Core
 
