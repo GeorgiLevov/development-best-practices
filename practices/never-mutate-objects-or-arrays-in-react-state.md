@@ -17,4 +17,4 @@ function updateColor(index, value) {
 
 **Avoid**: Mutating `colors[index] = value` before calling `setColors([...colors])`, or calling `.push()` / `.splice()` / `.sort()` directly on state arrays.
 
-**Source**: [Complex State — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/06-complex-state), [Mutation Bugs — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/06.01-mutation-bugs), [A Visual Guide to References in JavaScript — Dave Ceddia](https://daveceddia.com/javascript-references/), [Immer](https://www.npmjs.com/package/immer)
+**Source**: [Complex State — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/06-complex-state), [Mutation Bugs — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/06.01-mutation-bugs), [A Visual Guide to References in JavaScript — Dave Ceddia](https://daveceddia.com/javascript-references/), [Immer](https://www.npmjs.com/package/immer), [Using useState — react.gg](https://fireship.dev/c/react/using-usestate)
