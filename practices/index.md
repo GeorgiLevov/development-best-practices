@@ -30,6 +30,8 @@
 - [Paraphrase notes to retain concepts](paraphrase-notes-to-retain-concepts.md): Rewrite newly learned concepts in your own words as concise bookmarks.
 - [Learn in public for retention and accountability](learn-in-public-for-accountability.md): Share small demos, notes, and progress publicly to reinforce learning and accountability.
 
+- [Prefer simple, readable code over clever CSS or JS tricks](prefer-simple-readable-code-over-clever-tricks.md): Write straightforward, maintainable CSS and isolate unavoidable complexity instead of shipping clever one-liners.
+
 ## CSS Fundamentals
 
 - [Use exact CSS style-rule terminology](learn-css-rule-terminology.md): Distinguish selector, declaration, property, and value when reading specs and DevTools.
@@ -69,6 +71,15 @@
 - [Reserve `text-align` for text, not layout](reserve-text-align-for-text-not-layout.md): Use text-align only for text alignment (mindful of RTL), not for positioning blocks or images.
 - [Set typographic constraints before picking a font](set-type-constraints-before-picking-fonts.md): Define readability, weight, script, and tabular constraints before choosing a typeface.
 
+- [Respect OS subpixel font smoothing for dark-on-light body text](respect-os-font-smoothing-and-kerning-defaults.md): Keep `font-kerning` active and reserve `-webkit-font-smoothing: antialiased` for light text on dark macOS surfaces.
+- [Balance headings with `text-wrap: balance` and wrap long words safely](prevent-text-overflow-with-wrap-balance-and-hyphens.md): Use `text-wrap: balance` on headings, pair `overflow-wrap: break-word` with `hyphens: auto` + `lang`, and use `&nbsp;` for pairs.
+- [Use CSS `columns`, `float`, and ragged alignment selectively for editorial text](use-css-columns-and-floats-selectively-for-print-layouts.md): Use `columns` + `break-inside: avoid` and `float` for editorial wrap; prefer ragged-right prose over `justify`.
+- [Avoid CSS-column or `order` masonry tricks for dynamic feeds](avoid-css-column-masonry-tricks-in-dynamic-lists.md): Do not use CSS `columns` or `nth-child`/`order` Flexbox hacks for infinite-scroll or interactive masonry grids.
+- [Use system font stacks when zero latency and native feel come first](use-system-font-stacks-for-zero-latency-ui.md): Define an OS system font stack in a CSS custom property for instant, zero-download UI rendering.
+- [Self-host subsetted `.woff2` web fonts instead of hotlinking font CDNs](self-host-subsetted-woff2-web-fonts.md): Serve subsetted `.woff2` files from your own origin (via Fontsource, `next/font`, or Glyphhanger) for speed and GDPR privacy.
+- [Control FOIT/FOUT with `font-display` and fallback metric overrides](control-font-loading-with-font-display-and-metric-overrides.md): Prefer `font-display: fallback` or `optional`, test with throttled network + disabled local fonts, and match metrics.
+- [Prefer variable fonts when using three or more weights or styles](prefer-variable-fonts-for-multiple-weights-and-styles.md): Replace multiple static font requests with one variable `.woff2` file and use standard CSS properties for built-in axes.
+
 ## Units & Accessibility
 
 - [Choose `rem` vs `px` by user font-scaling intent](choose-rem-vs-px-by-user-font-scaling.md): Choose rem when a value should scale with user root font-size settings, and px when it should stay fixed.
@@ -88,6 +99,9 @@
 - [Escape stacking contexts for modals via native `<dialog>` or portals](use-portals-or-native-dialog-for-modals-and-overlays.md): Mount modals via `<dialog>.showModal()` or framework portals outside clipping and transformed ancestors.
 - [Never rely on color alone to communicate status or meaning](never-rely-on-color-alone-to-convey-meaning.md): Always pair color cues with text labels, icons, or patterns for color-vision accessibility.
 - [Truncate overflowing text intentionally with `ellipsis` or `line-clamp`](truncate-overflowing-text-intentionally.md): Use `ellipsis` (with `min-width: 0` in flex/grid) or `-webkit-line-clamp` only on non-critical preview text.
+
+- [Pair form controls with visible `<label>` elements, not placeholders](pair-form-inputs-with-visible-labels-not-placeholders.md): Always associate a persistent `<label>` with every form field; keep `placeholder` strictly as an optional hint.
+- [Keep a single `<h1>` per page for the main title, never on site logos](keep-only-one-h1-per-page-not-on-site-logos.md): Reserve `<h1>` for the page's unique main heading and use `<a>`/`<span>` for the recurring header logo.
 
 ## Debugging & Tooling
 
@@ -129,3 +143,41 @@
 - [Build accessible breadcrumbs with `<nav>`, `<ol>`, `aria-current`, and CSS separators](build-accessible-breadcrumbs-with-nav-ol-and-aria-current.md): Mark breadcrumbs with `<nav aria-label="Breadcrumb">`, `<ol>`, `aria-current="page"`, and decorative CSS slashes.
 - [Build custom progress bars with `progressbar` ARIA roles and corner clipping](accessible-custom-progress-bars-and-overflow-clipping.md): Set `role="progressbar"` plus value/label ARIA attributes when `<progress>` cannot be styled, and clip fills with a rounded wrapper.
 - [Style `<select>` and file inputs by overlaying or restyling native controls](style-select-and-file-inputs-by-overlaying-or-restyling-native-controls.md): Keep native `<select>` UX via an `opacity: 0` overlay + sibling combinators or `appearance: none` + `pointer-events: none` icons.
+
+## Flexbox Layout
+
+- [Choose Flexbox for 1D dynamic distribution and fluid rows](choose-flexbox-for-1d-dynamic-distribution.md): Use Flexbox to distribute, align, and wrap items along a single row or column axis.
+- [Align flex items with `justify-content`, `align-items`, and `align-self`](align-flex-items-with-justify-align-and-baseline.md): Use `justify-content` on the primary axis, `align-items`/`align-self` on the cross axis, and guard `baseline` inputs.
+- [Size flex items with `flex-basis`, `flex-grow`, and `flex-shrink`](size-flex-items-with-flex-basis-grow-and-shrink.md): Understand how `flex: 1` overrides `width`, and distinguish `flex-shrink: 0` from `min-width`.
+- [Build breakpoint-free responsive rows with `flex-wrap` and `flex`](build-intrinsic-responsive-rows-with-flex-wrap.md): Pair `flex-wrap: wrap` with `flex: 1 1 <basis>` so cards or nav items wrap and fill naturally without media queries.
+- [Use `gap` and `margin: auto` to space and split flex items](use-flex-gap-and-auto-margins-for-spacing.md): Space flex siblings with `gap` and push opposing item groups apart with `margin-inline-start: auto`.
+- [Keep DOM order aligned with visual flex order](keep-dom-order-aligned-with-visual-flex-order.md): Avoid `row-reverse`, `column-reverse`, and CSS `order` for meaningful content so keyboard Tab order matches visuals.
+- [Predict how Flexbox interacts with `position`, margins, `z-index`, and `min-width`](predict-flex-interactions-with-position-margins-and-z-index.md): Know that flex items ignore margin collapse, accept `z-index` without `position`, and resist shrinking below `min-content`.
+- [Fix non-sticking `position: sticky` flex children with `align-self: flex-start`](fix-sticky-elements-in-flex-containers-with-align-self-start.md): Prevent Flexbox's default `stretch` alignment from locking a sticky sidebar to full container height.
+- [Prevent overstuffed centered flex containers from clipping start items](prevent-overstuffed-centered-flex-scroll-clipping.md): Use `margin: auto` or `safe center` instead of bare `justify-content: center` on overflowing scrollable flex boxes.
+- [Apply `border-radius` directly to images instead of clipping card wrappers](round-image-corners-directly-to-preserve-overflowing-badges.md): Round `<img>` corners directly so overlapping badges, flags, or focus rings are not sliced off by `overflow: hidden`.
+
+## Responsive & Behavioural CSS
+
+- [Set the viewport meta tag without ever disabling user zoom](include-viewport-meta-tag-without-disabling-zoom.md): Include `width=device-width, initial-scale=1` on every page and never block pinch-zoom with `user-scalable=no`.
+- [Test responsive UI on real budget mobile devices and visible scrollbars](test-responsive-ui-on-real-low-end-mobile-devices.md): Verify touch interactions, Safari/WebKit quirks, and performance on physical mid/low-end phones with remote DevTools.
+- [Stick to one media-query direction and name ranges clearly](stick-to-one-media-query-direction-and-avoid-gap-overlaps.md): Remember `@media` adds zero specificity, avoid mixing `min-width`/`max-width`, and reset properties with `revert`.
+- [Gate `:hover` and touch sizing with interaction and preference queries](gate-hover-and-tap-targets-with-interaction-media-queries.md): Use `@media (hover: hover) and (pointer: fine)` for hover states, `pointer: coarse` for 44px tap targets, and user-preference queries.
+- [Scope CSS variables on `html`, supply fallbacks, and use numbered scales](scope-and-compose-css-variables-with-fallbacks-and-scales.md): Declare global tokens on `html` (not `*`), pass fallback defaults in `var()`, and use numbered shade/space scales.
+- [Use `calc()` to mix runtime units and show your math](use-css-calc-to-mix-units-and-document-math.md): Combine percentages and lengths in `calc()`, keep spaces around `+`/`-`, and respect CSS unit types.
+- [Use `dvh`/`svh` with `vh` fallbacks for mobile full-height layouts](use-dynamic-viewport-units-with-vh-fallbacks.md): Avoid mobile browser toolbar clipping on `100vh` by pairing `100vh` fallback with `100dvh` or `100svh`.
+- [Constrain fluid lengths and spacing with `clamp()`, `min()`, and `max()`](constrain-responsive-values-with-clamp-min-and-max.md): Replace multi-breakpoint overrides with `min()`, `max()`, and `clamp(min, ideal, max)`.
+- [Keep body text and form inputs at least `16px` (`1rem`) on mobile](use-safe-body-text-sizes-and-16px-form-inputs.md): Never shrink body copy below `1rem` (`16px`) and keep `<input>`/`<select>`/`<textarea>` `>= 1rem` to stop iOS zoom.
+- [Build zoom-safe fluid typography with `clamp()`, `vw`, and `rem`](build-zoom-safe-fluid-typography-with-clamp-and-rem.md): Pair `vw` with a positive `rem` offset inside `clamp()` so fluid headings still scale at 200% browser zoom.
+- [Use container queries with `container-type: inline-size` and named containers](use-container-queries-with-inline-size-and-named-containers.md): Measure component containers with `inline-size` (not `size`), optionally name them, and style children with `@container`.
+- [Bundle interdependent fallbacks with `@supports` feature queries](bundle-progressive-enhancement-with-supports-feature-queries.md): Let single properties degrade silently; use `@supports` only when multiple declarations depend on a feature.
+
+## Images, Icons & Media
+
+- [Prefer inline SVG icons over icon fonts and set `display: block`](prefer-inline-svg-icons-over-icon-fonts.md): Use inline SVG icons (not icon fonts), strip inline baseline gaps with `display: block`, and label icon-only buttons.
+- [Use semantic `<img>` with contextual `alt` text for meaningful images](use-semantic-img-with-contextual-alt-over-background-image.md): Reserve `<img>` for meaningful visuals, write concise context-aware `alt` text, and null decorative images with exact `alt=""`.
+- [Crop and anchor sized `<img>`/`<video>` with `object-fit` and `object-position`](fit-and-crop-replaced-media-with-object-fit-and-object-position.md): Pair fixed `width` and `height` on images/videos with `object-fit: cover` (or `contain`) and `object-position`.
+- [Guard `<img>` intrinsic sizing inside Flexbox containers](guard-img-elements-inside-flex-containers.md): Wrap or set `min-width: 0` / `width: 0` on flex-item images so intrinsic pixel dimensions don't overflow or skew `flex` ratios.
+- [Size proportional media, videos, and iframes with `aspect-ratio`](reserve-media-proportions-with-aspect-ratio.md): Use CSS `aspect-ratio` (~97.2% support) with `object-fit: cover` instead of `padding-bottom` wrapper hacks.
+- [Serve high-DPI AVIF/WebP images with `srcset` and `<picture>`](serve-responsive-avif-webp-images-with-srcset-and-picture.md): Provide `1x`/`2x`/`3x` candidates via `srcset` and ordered AVIF/WebP fallbacks via `<picture>` (or `next/image`).
+- [Reserve `background-image` for tiling patterns and crisp high-DPI surfaces](reserve-background-image-for-tiling-and-decorative-surfaces.md): Use `background-image` for repeating patterns or decorative textures, pairing `min-resolution` with explicit `1x` `background-size`.
