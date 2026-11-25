@@ -24,4 +24,4 @@ async function handleSearch(query) {
 
 **Avoid**: Assuming `fetch()` rejects on `404`/`500` responses, mixing independent `isLoading`/`isError` booleans into contradictory UI states, or interpolating raw user input into URLs.
 
-**Source**: [Data Fetching — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/07-data-fetching), [Fetching on Event — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/07.01-fetching-on-event), [Fetch Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/07.03-fetch-exercises)
+**Source**: [Data Fetching — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/07-data-fetching), [Fetching on Event — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/07.01-fetching-on-event), [Fetch Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/07.03-fetch-exercises), [Effects Part 2 — react.gg](https://fireship.dev/c/react/effects-part-2), [Country Info — react.gg](https://fireship.dev/c/react/country-info-challenge), [Hacker News — react.gg](https://fireship.dev/c/react/hacker-news-challenge)
