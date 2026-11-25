@@ -26,6 +26,7 @@
 - [Group sibling JSX elements with React Fragments (`<>...</>`) instead of extra `<div>`s](group-top-level-elements-with-react-fragments.md): Return `<>...</>` React Fragments instead of wrapper `<div>`s so sibling nodes don't break CSS or HTML structure.
 - [Use `<dl>`, `<dt>`, and `<dd>` for key-value metadata pairs](use-description-lists-for-key-value-metadata.md): Wrap structured label-value metadata in semantic `<dl>`/`<dt>`/`<dd>` lists instead of generic `<div>`/`<span>` pairs.
 - [Keep submit buttons clickable and explain validation errors](keep-submit-buttons-clickable-and-explain-validation-errors.md): Avoid `disabled` submit buttons that hide why submission fails; let users click and show clear validation feedback.
+- [Replace `window.alert()` and `window.confirm()` with non-blocking stateful UI](replace-blocking-browser-dialogs-with-stateful-ui.md): Use state-driven inline banners (`role="alert"`), toasts, or accessible `<dialog>` modals instead of thread-blocking native `alert`/`confirm` prompts.
 
 ## Interaction, Focus & Scrolling
 
@@ -41,6 +42,7 @@
 - [Highlight containers with `:focus-within` or `:has(:focus-visible)`](highlight-containers-with-focus-within-or-has-focus-visible.md): Use `:focus-within` for coarse states and `:has(:focus-visible)` for keyboard-only parent rings.
 - [Use `:has()` for parent, previous-sibling, and global state styling](use-has-for-parent-sibling-and-global-state-styling.md): Style parents, previous siblings, and document state with `:has()` instead of JS class syncing.
 - [Pad scroll containers with matching negative margins so focus rings aren't clipped](pad-scroll-containers-with-negative-margins-to-save-focus-rings.md): Pad `overflow: auto` button strips and balance with negative margins so focus outlines and shadows aren't clipped.
+- [Prevent global keyboard shortcuts from colliding with focused buttons and inputs](stop-event-propagation-around-global-shortcuts.md): Ignore editable elements in `window` `keydown` listeners and call `event.stopPropagation()` on conflicting keys (like `Space`) from focused buttons.
 
 ## Animations & Motion
 

@@ -30,12 +30,16 @@
 
 ## UI Engineering: Components, Interaction & Motion
 
-- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (45 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
+- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (47 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
 
 ## React Fundamentals, State & Forms
 
-- [React Fundamentals, State & Forms index](index-react.md): JSX, components, keys, conditional rendering, `useState`, render/commit, events, forms, and state architecture. (16 practices; sections: JSX, Components & Rendering; State, Events & Forms.)
+- [React Fundamentals, State & Forms index](index-react.md): JSX, components, keys, conditional rendering, styling, file structure, `useState`, render/commit, events, forms, and state architecture. (22 practices; sections: JSX, Components & Structure; State, Events & Forms.)
+
+## React Hooks, Effects & Performance
+
+- [React Hooks, Effects & Performance index](index-react-hooks.md): `useId`, Rules of Hooks, `useRef`, `useEffect` & cleanup, StrictMode, stale closures, custom hooks, data fetching, memoization, and React Compiler. (12 practices; sections: `useId`, Rules of Hooks & Refs; `useEffect`, Cleanup & Closures; Custom Hooks & Data Fetching; Render Optimization, Memoization & React Compiler.)
 
 ## Developer Mindset, Debugging & Tooling
 
-- [Developer Mindset, Debugging & Tooling index](index-developer-mindset.md): Learning habits, debugging strategy, and DevTools workflows. (19 practices; sections: Developer Mindset & Learning; Debugging & Tooling.)
+- [Developer Mindset, Debugging & Tooling index](index-developer-mindset.md): Learning habits, debugging strategy, and DevTools/package tooling workflows. (20 practices; sections: Developer Mindset & Learning; Debugging & Tooling.)
