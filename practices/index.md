@@ -24,6 +24,10 @@
 
 - [CSS Fundamentals & Layout index](index-css-layout.md): Cascade, selectors, Flow layout, positioning, Flexbox, Grid, and responsive or behavioural CSS. (75 practices; sections: CSS Fundamentals; Layout, Flow & Positioning; Flexbox Layout; CSS Grid Layout; Responsive & Behavioural CSS.)
 
+## Sass Language, Modules & CLI Tooling
+
+- [Sass Language, Modules & CLI Tooling index](index-sass.md): Dart Sass CLI and source maps, SCSS vs indented syntax and silent comments, shallow nesting vs native CSS nesting, the `&` parent selector, compile-time `$variables` and Sass `rgb()` helpers, mixins vs `@extend`, interpolation and math, `@use` built-in modules, loops, `@if`/`if()`, functions, and validated map-driven mixins. (17 practices; sections: CLI, Syntax & Comments; Nesting & the Parent Selector; Variables, Color & Compile-Time Math; Mixins, Extends & Interpolation; Modules, Loops, Functions & Maps.)
+
 ## Typography, Color, Media & Visual Effects
 
 - [Typography, Color, Media & Visual Effects index](index-typography-media.md): Type, color, units, images and icons, plus filters, shadows, gradients, border radius, and clip-path. (69 practices; sections: Typography & Color; Units & Accessibility; Images, Icons & Media; Visual Effects: Filters, Shadows, Gradients & Shapes.)
