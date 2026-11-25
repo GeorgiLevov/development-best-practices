@@ -28,6 +28,14 @@
 
 - [Sass Language, Modules & CLI Tooling index](index-sass.md): Dart Sass CLI and source maps, SCSS vs indented syntax and silent comments, shallow nesting vs native CSS nesting, the `&` parent selector, compile-time `$variables` and Sass `rgb()` helpers, mixins vs `@extend`, interpolation and math, `@use` built-in modules, loops, `@if`/`if()`, functions, and validated map-driven mixins. (17 practices; sections: CLI, Syntax & Comments; Nesting & the Parent Selector; Variables, Color & Compile-Time Math; Mixins, Extends & Interpolation; Modules, Loops, Functions & Maps.)
 
+## CSS Architecture, Sass Modules & Build Tooling
+
+- [CSS Architecture, Sass Modules & Build Tooling index](index-css-architecture.md): Layered Sass partials (`@use`/`@forward` barrels, abstracts/base/components/layout/utilities/vendor), generated utilities, reusable starters (`degit`/GitHub templates), Vite for multi-page Sass sites, and `postcss-preset-env` at stage 3 with optional PurgeCSS. (7 practices; sections: Partials, `@use` / `@forward` & Layered Architecture; Utilities, Starters, Vite & PostCSS.)
+
+## Design Systems, Tokens & Theming
+
+- [Design Systems, Tokens & Theming index](index-design-systems.md): Global vs contextual vs component tokens, a dedicated `_tokens` partial, runtime theming via CSS custom properties (`prefers-color-scheme`, class toggles, opt-out flags), and class prefixing or categorization when a system is reused. (4 practices; sections: Token Layers & File Organization; Theming, Prefixing & Reuse.)
+
 ## Typography, Color, Media & Visual Effects
 
 - [Typography, Color, Media & Visual Effects index](index-typography-media.md): Type, color, units, images and icons, plus filters, shadows, gradients, border radius, and clip-path. (69 practices; sections: Typography & Color; Units & Accessibility; Images, Icons & Media; Visual Effects: Filters, Shadows, Gradients & Shapes.)
