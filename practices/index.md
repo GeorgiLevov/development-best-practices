@@ -22,15 +22,15 @@
 
 ## CSS Fundamentals & Layout
 
-- [CSS Fundamentals & Layout index](index-css-layout.md): Cascade, selectors, Flow layout, positioning, Flexbox, Grid, and responsive or behavioural CSS. (70 practices; sections: CSS Fundamentals; Layout, Flow & Positioning; Flexbox Layout; CSS Grid Layout; Responsive & Behavioural CSS.)
+- [CSS Fundamentals & Layout index](index-css-layout.md): Cascade, selectors, Flow layout, positioning, Flexbox, Grid, and responsive or behavioural CSS. (75 practices; sections: CSS Fundamentals; Layout, Flow & Positioning; Flexbox Layout; CSS Grid Layout; Responsive & Behavioural CSS.)
 
 ## Typography, Color, Media & Visual Effects
 
-- [Typography, Color, Media & Visual Effects index](index-typography-media.md): Type, color, units, images and icons, plus filters, shadows, gradients, border radius, and clip-path. (66 practices; sections: Typography & Color; Units & Accessibility; Images, Icons & Media; Visual Effects: Filters, Shadows, Gradients & Shapes.)
+- [Typography, Color, Media & Visual Effects index](index-typography-media.md): Type, color, units, images and icons, plus filters, shadows, gradients, border radius, and clip-path. (69 practices; sections: Typography & Color; Units & Accessibility; Images, Icons & Media; Visual Effects: Filters, Shadows, Gradients & Shapes.)
 
 ## UI Engineering: Components, Interaction & Motion
 
-- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (37 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
+- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (43 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
 
 ## Developer Mindset, Debugging & Tooling
 
