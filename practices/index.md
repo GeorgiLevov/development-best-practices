@@ -70,7 +70,7 @@
 
 ## Full-Stack React, Next.js & Server Architecture
 
-- [Full-Stack React, Next.js & Server Architecture index](index-react-fullstack.md): Rendering paradigms (CSR/SSR/SSG/ISR), React Server Components, `'use client'` boundary minimization, SSR hydration safety, App Router & Next 15+ async APIs, persistent layout state, bundle analysis, static/dynamic rendering, `generateMetadata` & `React.cache`, Streaming SSR & Suspense, `next/dynamic` facades, and flicker-free SSR dark mode. (14 practices; sections: Rendering Models, RSCs & Client Boundaries; App Router, State Persistence & Static/Dynamic Builds; Metadata, Caching, Streaming & Lazy Loading.)
+- [Full-Stack React, Next.js & Server Architecture index](index-react-fullstack.md): Rendering paradigms (CSR/SSR/SSG/ISR, including `revalidate`), React Server Components (including Prisma reads and stable Server Actions with `revalidatePath`), `'use client'` boundary minimization, SSR hydration safety, App Router & Next 15+ async APIs, `next/image`, persistent layout state, bundle analysis, static/dynamic rendering, `generateMetadata` & `React.cache`, Streaming SSR & Suspense, `next/dynamic` facades, flicker-free SSR dark mode, Auth.js / next-auth v4 sessions, JSON Route Handlers, `router.refresh()` after client mutations, and App Router `error.js`. (18 practices; sections: Rendering Models, RSCs & Client Boundaries; App Router, State Persistence & Static/Dynamic Builds; Metadata, Caching, Streaming & Lazy Loading; Auth, Route Handlers, Errors & Client Refresh.)
 
 ## JavaScript Foundations for Modern React
 
