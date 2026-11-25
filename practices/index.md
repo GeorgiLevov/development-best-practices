@@ -30,7 +30,7 @@
 
 ## UI Engineering: Components, Interaction & Motion
 
-- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (50 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
+- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (54 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
 
 ## React Fundamentals, State & Forms
 
@@ -47,3 +47,7 @@
 ## Developer Mindset, Debugging & Tooling
 
 - [Developer Mindset, Debugging & Tooling index](index-developer-mindset.md): Learning habits, debugging strategy, and DevTools/package tooling workflows. (20 practices; sections: Developer Mindset & Learning; Debugging & Tooling.)
+
+## Full-Stack React, Next.js & Server Architecture
+
+- [Full-Stack React, Next.js & Server Architecture index](index-react-fullstack.md): Rendering paradigms (CSR/SSR/SSG/ISR), React Server Components, `'use client'` boundary minimization, SSR hydration safety, App Router & Next 15+ async APIs, persistent layout state, bundle analysis, static/dynamic rendering, `generateMetadata` & `React.cache`, Streaming SSR & Suspense, `next/dynamic` facades, and flicker-free SSR dark mode. (12 practices; sections: Rendering Models, RSCs & Client Boundaries; App Router, State Persistence & Static/Dynamic Builds; Metadata, Caching, Streaming & Lazy Loading.)
