@@ -10,7 +10,7 @@
 - [Adopt a growth mindset for debugging and learning](adopt-growth-mindset-for-debugging.md): Treat tough bugs and unfamiliar tools as trainable skills rather than fixed personal limits.
 - [Notice fixed-mindset triggers as cues](notice-fixed-mindset-triggers.md): Spot defensiveness, avoidance, or shortcut-seeking as cues to shift back into learning mode.
 - [Praise process and strategy, not innate talent](praise-process-and-strategy-not-innate-talent.md): Credit specific strategies, rigor, and error recovery in reviews instead of innate smarts.
-- [Learn by active struggle and experimentation](learn-by-active-struggle-and-experimentation.md): Experiment in live code and attempt problems before reading solutions to build recall.
+- [Learn by active struggle and experimentation](learn-by-active-struggle-and-experimentation.md): Attempt problems before reading solutions, timebox stuck spots to 15–30 minutes, then close the solution and rebuild.
 - [Paraphrase notes to retain concepts](paraphrase-notes-to-retain-concepts.md): Rewrite newly learned concepts in your own words as concise bookmarks.
 - [Learn in public for retention and accountability](learn-in-public-for-accountability.md): Share small demos, notes, and progress publicly to reinforce learning and accountability.
 
@@ -29,3 +29,4 @@
 - [Prevent `100vw` horizontal overflow and debug overflowing boxes directly](prevent-and-debug-horizontal-overflow.md): Prefer `100%` over `100vw` and measure wide elements directly instead of masking overflow with `overflow-x: hidden` on `body`.
 - [Configure compiler plugins for readable class names, SSR IDs, and prefixes](configure-compiler-plugins-for-dev-names-and-ssr.md): Enable SWC/Babel `displayName` and `ssr` plugins and check vendor-prefix settings for properties like `backdrop-filter`.
 - [Measure performance before optimizing intuition-based bottlenecks](measure-performance-before-optimizing.md): Benchmark suspicious paths with `console.time()` and low-end hardware against ~100ms thresholds before sacrificing readability.
+- [Triage `npm audit` alerts by runtime exposure instead of running `--force`](triage-npm-audit-warnings-by-runtime-exposure.md): Check `npm audit --omit=dev` and real runtime reachability instead of running `npm audit fix --force` over build-tool warnings.
