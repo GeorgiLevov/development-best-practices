@@ -30,11 +30,15 @@
 
 ## UI Engineering: Components, Interaction & Motion
 
-- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (47 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
+- [UI Engineering: Components, Interaction & Motion index](index-ui-engineering.md): React component architecture, interaction, focus, scrolling, `:has()`, and animations. (50 practices; sections: Component Architecture & UI Patterns; Interaction, Focus & Scrolling; Animations & Motion.)
 
 ## React Fundamentals, State & Forms
 
 - [React Fundamentals, State & Forms index](index-react.md): JSX, components, keys, conditional rendering, styling, file structure, `useState`, render/commit, events, forms, and state architecture. (22 practices; sections: JSX, Components & Structure; State, Events & Forms.)
+
+## React Component Design & Patterns
+
+- [React Component Design & Patterns index](index-react-patterns.md): Component abstraction spectrum, `ref` forwarding, constrained polymorphism, named-export compound components, JSX slots, controlled vs uncontrolled APIs, `key` state resets, Context Providers & memoization, `useReducer`, Immer, `createPortal`, and Error Boundaries. (13 practices; sections: Component APIs, Slots & Composition; State Architecture, Context & Reducers; Immutable Updates, Portals & Error Boundaries.)
 
 ## React Hooks, Effects & Performance
 
