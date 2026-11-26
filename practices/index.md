@@ -60,6 +60,10 @@
 
 - [React Hooks, Effects & Performance index](index-react-hooks.md): `useId`, Rules of Hooks, `useRef`, `useEffect` & cleanup, StrictMode, stale closures, custom hooks, data fetching, memoization, React Compiler, `useLayoutEffect`, `useSyncExternalStore`, `useEffectEvent`, hydration-safe storage and browser-environment hooks, and debounce/throttle values. (18 practices; sections: `useId`, Rules of Hooks & Refs; `useEffect`, Cleanup & Closures; Custom Hooks & Data Fetching; Render Optimization, Memoization & React Compiler; Layout Effects, External Stores & Effect Events; Reusable Hook Patterns.)
 
+## React Data Fetching & TanStack Query v5
+
+- [React Data Fetching & TanStack Query v5 index](index-react-data-fetching.md): `queryKey` dependencies & `skipToken`, `status` vs `fetchStatus` in v5, `staleTime`/`gcTime`/polling, `useQueries`, prefetching & `placeholderData`/`initialData`, `useInfiniteQuery` & `maxPages`, `useMutation` & fuzzy invalidation, optimistic rollbacks & `isMutating`, `queryOptions` factories, `select`/tracked properties/`AbortSignal`, `throwOnError`/`QueryErrorResetBoundary`/`QueryCache.onError`, Zod validation, offline `networkMode`/persisters/WebSockets, and isolated component testing with MSW v2. (14 practices; sections: Query Keys, Lifecycle & Freshness; Prefetching, Pagination & Mutations; Architecture, Performance, Errors & Testing.)
+
 ## React Concurrent Rendering, Actions & Suspense Composition
 
 - [React Concurrent Rendering, Actions & Suspense Composition index](index-react-concurrent.md): `useDeferredValue`, `useTransition` / `startTransition`, async Actions and `<form action>`, `useOptimistic`, client composition of `use()` / Suspense / Error Boundaries, and starting Server Component fetches early to pass or await promises. (6 practices; sections: Transitions, Deferred Values & Actions; Suspense, `use` & Network Composition.)
