@@ -4,7 +4,7 @@
 
 **When to use**: When sequencing asynchronous work, wrapping a callback-style API, or handling success and failure for a promise.
 
-**Rule**: Nested callbacks are hard to read as a sequence and invert control: you hand your continuation to another API and hope it is called once, with the right arguments. Prefer promises (`pending`, `fulfilled`, or `rejected`) and listen with `.then` / `.catch`, or—better for dependent steps—mark the function `async` and `await` each result in order so the code reads top to bottom. Every `async` function returns a promise (a returned value is wrapped). `await` is only legal inside an `async` function or at the top level of an ES module. Handle rejections with `try`/`catch` around the `await`s rather than dropping error paths when you convert `.catch` code.
+**Rule**: Nested callbacks are hard to read as a sequence and invert control: you hand your continuation to another API and hope it is called once, with the right arguments. Prefer promises (`pending`, `fulfilled`, or `rejected`) and listen with `.then` / `.catch`, or—better for dependent steps—mark the function `async` and `await` each result in order so the code reads top to bottom. Every `async` function returns a promise (a returned value is wrapped). `await` is only legal inside an `async` function or at the top level of an ES module. Handle rejections with `try`/`catch` around the `await`s rather than dropping error paths when you convert `.catch` code. Promise reactions run as higher-priority jobs than `setTimeout` tasks; see [Let the event loop drain the call stack before tasks, and run promise jobs first](let-the-event-loop-drain-the-call-stack-before-tasks.md).
 
 **Example**:
 ```js
@@ -21,4 +21,4 @@ async function showProfile(id) {
 
 **Avoid**: Deeply nested success/error callbacks for sequential work, using `await` inside a non-`async` function, or converting a `.catch` chain to `async`/`await` without a `try`/`catch`.
 
-**Source**: [Callbacks, Promises, Async/Await — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/callbacks-promises-async-await)
+**Source**: [Callbacks, Promises, Async/Await — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/callbacks-promises-async-await), [The Evolution of Async JavaScript - From Callbacks, to Promises, to Async/Await — Fireship Advanced JavaScript](https://fireship.dev/c/advanced-javascript/async-javascript-from-callbacks-to-promises-to-async-await)

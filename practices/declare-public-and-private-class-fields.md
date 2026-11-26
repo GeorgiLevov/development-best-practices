@@ -28,4 +28,4 @@ car.getMiles(); // 10
 
 **Avoid**: Treating `_private` names as actually private, or expecting `#field += n` without `this` to work in shipped JavaScript.
 
-**Source**: [Private and Public Class Fields — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/private-and-public-class-fields)
+**Source**: [Private and Public Class Fields — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/private-and-public-class-fields), [JavaScript Private and Public Class Fields — Fireship Advanced JavaScript](https://fireship.dev/c/advanced-javascript/javascript-private-and-public-class-fields)
