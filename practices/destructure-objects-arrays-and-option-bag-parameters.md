@@ -18,4 +18,4 @@ const { url: href, ...rest } = link;
 
 **Avoid**: Long positional parameter lists padded with `null`, or defaulting destructured numbers with `value || fallback` (that clobbers `0`).
 
-**Source**: [Object and Array Destructuring — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/object-array-destructuring)
+**Source**: [Object and Array Destructuring — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/object-array-destructuring), [Destructuring — Fireship JavaScript](https://fireship.dev/c/js/102-destructuring)
