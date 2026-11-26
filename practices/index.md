@@ -36,6 +36,10 @@
 
 - [Design Systems, Tokens & Theming index](index-design-systems.md): Global vs contextual vs component tokens, a dedicated `_tokens` partial, runtime theming via CSS custom properties (`prefers-color-scheme`, class toggles, opt-out flags), and class prefixing or categorization when a system is reused. (4 practices; sections: Token Layers & File Organization; Theming, Prefixing & Reuse.)
 
+## Astro, Content Collections, Tina & Sass
+
+- [Astro, Content Collections, Tina & Sass index](index-astro.md): Astro layouts and props, Sass in Vite/Astro, scoped styles vs shared partials, `class:list` and polymorphic components, content collections and generated routes, parameterized excerpts, Tina modeling with references, and Open Graph/SEO tags in `BaseHead`. (9 practices; sections: Layouts, Sass & Scoped Styles; Components, Collections, Tina & Metadata.)
+
 ## Typography, Color, Media & Visual Effects
 
 - [Typography, Color, Media & Visual Effects index](index-typography-media.md): Type, color, units, images and icons, plus filters, shadows, gradients, border radius, and clip-path. (69 practices; sections: Typography & Color; Units & Accessibility; Images, Icons & Media; Visual Effects: Filters, Shadows, Gradients & Shapes.)
