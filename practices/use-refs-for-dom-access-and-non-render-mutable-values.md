@@ -22,6 +22,6 @@ function SearchBar() {
 }
 ```
 
-**Avoid**: Reading `ref.current` during render (when the DOM node does not exist yet), storing visible UI state in `useRef`, or using `document.querySelector` instead of refs on React-owned elements.
+**Avoid**: Reading `ref.current` during render (when the DOM node does not exist yet), storing visible UI state in `useRef`, using `document.querySelector` or `getElementsBy*` instead of refs on React-owned elements, or moving an event-triggered DOM write (such as setting a textarea's height from `scrollHeight`) into an Effect when the handler already has the node.
 
-**Source**: [Refs — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/04-refs), [Ref Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/04.01-ref-exercises), [React v19 Ref Cleanups — React Blog](https://react.dev/blog/2024/12/05/react-19#cleanup-functions-for-refs)
+**Source**: [Refs — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/04-refs), [Ref Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/04.01-ref-exercises), [React v19 Ref Cleanups — React Blog](https://react.dev/blog/2024/12/05/react-19#cleanup-functions-for-refs), [Preserving Values with useRef — react.gg](https://fireship.dev/c/react/refs), [Expanding Textarea — react.gg](https://fireship.dev/c/react/expanding-textarea-challenge)

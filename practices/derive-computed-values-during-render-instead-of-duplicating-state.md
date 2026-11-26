@@ -19,6 +19,6 @@ function Game({ words }) {
 }
 ```
 
-**Avoid**: Creating parallel `useState` variables (e.g., `gameStatus`, `letterStatuses`, `filteredItems`) synchronized manually in handlers or `useEffect`, or destructively truncating user-edited array items when a display count decreases.
+**Avoid**: Creating parallel `useState` variables (e.g., `gameStatus`, `letterStatuses`, `filteredItems`) synchronized manually in handlers or `useEffect` (including an effect that filters a list when the search term changes), or destructively truncating user-edited array items when a display count decreases.
 
-**Source**: [Wordle Overview & Tips — Joy of React](https://courses.joshwcomeau.com/joy-of-react/project-wordle/04-overview), [Wordle Solution — Joy of React](https://courses.joshwcomeau.com/joy-of-react/project-wordle/06-solution), [Complex State Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/06.02-state-exercises)
+**Source**: [Wordle Overview & Tips — Joy of React](https://courses.joshwcomeau.com/joy-of-react/project-wordle/04-overview), [Wordle Solution — Joy of React](https://courses.joshwcomeau.com/joy-of-react/project-wordle/06-solution), [Complex State Exercises — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/06.02-state-exercises), [Search Filter — react.gg](https://fireship.dev/c/react/search-filter-challenge)

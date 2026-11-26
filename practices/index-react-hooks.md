@@ -27,3 +27,9 @@
 
 - [Restructure component composition before reaching for `React.memo`](restructure-components-before-reaching-for-memo.md): State changes cascade re-renders to all descendants; push state down or lift static subtrees into `children` before memoizing.
 - [Apply `React.memo`, `useMemo`, and `useCallback` intentionally alongside React Compiler](stabilize-memoized-values-and-callbacks-intentionally.md): Reserve manual memoization for profiled slow subtrees/calculations or stable `memo`/`useEffect` identities, and enable React Compiler where supported.
+
+## Layout Effects, External Stores & Effect Events
+
+- [Synchronize layout measurements before paint with `useLayoutEffect`](synchronize-layout-before-paint-with-uselayouteffect.md): Use `useLayoutEffect` only when the first paint would flicker or misplace UI without a DOM or viewport measurement; keep ordinary sync work in `useEffect`.
+- [Subscribe to external stores with `useSyncExternalStore`](subscribe-to-external-stores-with-usesyncexternalstore.md): Subscribe to values that already live outside React (`matchMedia`, `navigator.onLine`, other stores) with a stable `subscribe`/`getSnapshot` pair instead of mirroring them in `useState`.
+- [Extract non-synchronizing reads from Effects with `useEffectEvent`](extract-nonsynchronizing-reads-with-useeffectevent.md): In React 19.2+, wrap reactive values that an Effect must read but should not re-subscribe to in `useEffectEvent`; keep synchronizing values in the dependency array.

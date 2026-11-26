@@ -4,7 +4,7 @@
 
 **When to use**: When rendering lists or repeated elements with `.map()` in React.
 
-**Rule**: Place `key` on the outermost element returned by each `.map()` iteration (or `<React.Fragment key={id}>` for sibling groups), not on a nested child. Keep keys unique only among siblings in that array and never read `props.key` inside a component—React consumes `key` internally. When items lack a persistent database ID, generate one once when the item is created (e.g., `crypto.randomUUID()`), never via `Math.random()` during render, and avoid array `index` keys whenever items can be inserted, deleted, sorted, or filtered.
+**Rule**: Place `key` on the outermost element returned by each `.map()` iteration (or `<React.Fragment key={id}>` for sibling groups), not on a nested child. Keep keys unique only among siblings in that array and never read `props.key` inside a component—React consumes `key` internally. When items lack a persistent database ID, generate one once when the item is created (e.g., `crypto.randomUUID()`), never via `Math.random()` during render, and avoid array `index` keys whenever items can be inserted, deleted, sorted, or filtered. Using the index is acceptable only for a static list that is never reordered or mutated.
 
 **Example**:
 ```jsx
@@ -22,4 +22,4 @@ function addTask(title) {
 
 **Avoid**: Using `key={index}` on mutable/filterable lists (which scrambles DOM focus and input state), calling `crypto.randomUUID()` or `Math.random()` inside `.map()`, or putting `key` on a child inside `<li>`.
 
-**Source**: [Mapping Over Data — Joy of React](https://courses.joshwcomeau.com/joy-of-react/01-fundamentals/06.01-mapping), [Keys — Joy of React](https://courses.joshwcomeau.com/joy-of-react/01-fundamentals/06.02-keys), [Dynamic Key Generation — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/07-key-generation), [Key Gotchas — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/07.01-key-gotchas)
+**Source**: [Mapping Over Data — Joy of React](https://courses.joshwcomeau.com/joy-of-react/01-fundamentals/06.01-mapping), [Keys — Joy of React](https://courses.joshwcomeau.com/joy-of-react/01-fundamentals/06.02-keys), [Dynamic Key Generation — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/07-key-generation), [Key Gotchas — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/07.01-key-gotchas), [Rendering Lists — react.gg](https://fireship.dev/c/react/rendering-lists-challenge), [Rendering Lists (No Keys) — react.gg](https://fireship.dev/c/react/rendering-lists-no-keys-challenge)

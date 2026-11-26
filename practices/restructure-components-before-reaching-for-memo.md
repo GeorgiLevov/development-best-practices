@@ -28,6 +28,6 @@ function ColorWrapper({ children }) {
 }
 ```
 
-**Avoid**: Keeping fast-changing input/hover state at the top of `<App />` and wrapping dozens of intermediate components in `React.memo` instead of isolating state or composing via `children`.
+**Avoid**: Keeping fast-changing input/hover state at the top of `<App />` and wrapping dozens of intermediate components in `React.memo` instead of isolating state or composing via `children`, or wrapping a child in `React.memo` while passing an inline function prop whose identity changes every render.
 
-**Source**: [Why React Renders — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/08.01-why-react-renders), [Alternatives to Memoization — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/08.06-alternatives), [Before You memo() — Overreacted](https://overreacted.io/before-you-memo/)
+**Source**: [Why React Renders — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/08.01-why-react-renders), [Alternatives to Memoization — Joy of React](https://courses.joshwcomeau.com/joy-of-react/03-hooks/08.06-alternatives), [Before You memo() — Overreacted](https://overreacted.io/before-you-memo/), [Why React Renders — react.gg](https://fireship.dev/c/react/renders), [Referential Equality and Why It Matters — react.gg](https://fireship.dev/c/react/referential-equality), [Optimizing Renders — react.gg](https://fireship.dev/c/react/optimizing-renders-challenge)

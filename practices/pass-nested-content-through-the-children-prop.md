@@ -22,4 +22,4 @@ function IconButton({ icon, children }) {
 
 **Avoid**: `<IconButton contents="Go home" />`-style APIs that only accept plain strings and diverge from HTML's nesting model.
 
-**Source**: [Intro to React — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/bonus/02-intro-to-react), [A Complete Beginner's Guide to React — We Learn Code](https://welearncode.com/beginners-guide-react-2020/), [React for Beginners handbook — freeCodeCamp](https://www.freecodecamp.org/news/react-beginner-handbook/)
+**Source**: [Intro to React — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/bonus/02-intro-to-react), [A Complete Beginner's Guide to React — We Learn Code](https://welearncode.com/beginners-guide-react-2020/), [React for Beginners handbook — freeCodeCamp](https://www.freecodecamp.org/news/react-beginner-handbook/), [Props — react.gg](https://fireship.dev/c/react/props)

@@ -58,7 +58,7 @@
 
 ## React Hooks, Effects & Performance
 
-- [React Hooks, Effects & Performance index](index-react-hooks.md): `useId`, Rules of Hooks, `useRef`, `useEffect` & cleanup, StrictMode, stale closures, custom hooks, data fetching, memoization, and React Compiler. (12 practices; sections: `useId`, Rules of Hooks & Refs; `useEffect`, Cleanup & Closures; Custom Hooks & Data Fetching; Render Optimization, Memoization & React Compiler.)
+- [React Hooks, Effects & Performance index](index-react-hooks.md): `useId`, Rules of Hooks, `useRef`, `useEffect` & cleanup, StrictMode, stale closures, custom hooks, data fetching, memoization, React Compiler, `useLayoutEffect`, `useSyncExternalStore`, and `useEffectEvent`. (15 practices; sections: `useId`, Rules of Hooks & Refs; `useEffect`, Cleanup & Closures; Custom Hooks & Data Fetching; Render Optimization, Memoization & React Compiler; Layout Effects, External Stores & Effect Events.)
 
 ## Developer Mindset, Debugging & Tooling
 

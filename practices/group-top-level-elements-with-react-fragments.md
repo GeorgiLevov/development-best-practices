@@ -20,4 +20,4 @@ function AppShell() {
 
 **Avoid**: Wrapping every multi-node return in an extra `<div>` that interferes with Flexbox/Grid children, `nth-child` selectors, or table/list markup.
 
-**Source**: [Exercises (pt. 2) — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/03-components/09-exercises-pt2)
+**Source**: [Exercises (pt. 2) — CSS for JavaScript Developers](https://courses.joshwcomeau.com/css-for-js/03-components/09-exercises-pt2), [JSX — react.gg](https://fireship.dev/c/react/jsx), [Adjacent Elements — react.gg](https://fireship.dev/c/react/adjacent-elements-challenge)

@@ -21,4 +21,4 @@ function SearchPage() {
 
 **Avoid**: Duplicating the same state in two sibling components and trying to synchronize them manually, or hoisting every local UI state all the way to `<App />` unnecessarily.
 
-**Source**: [Props Vs. State — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/05-props-vs-state), [Lifting State Up — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/08-lifting-state-up)
+**Source**: [Props Vs. State — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/05-props-vs-state), [Lifting State Up — Joy of React](https://courses.joshwcomeau.com/joy-of-react/02-state/08-lifting-state-up), [Using useState — react.gg](https://fireship.dev/c/react/using-usestate)
