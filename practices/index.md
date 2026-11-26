@@ -60,6 +60,10 @@
 
 - [React Hooks, Effects & Performance index](index-react-hooks.md): `useId`, Rules of Hooks, `useRef`, `useEffect` & cleanup, StrictMode, stale closures, custom hooks, data fetching, memoization, React Compiler, `useLayoutEffect`, `useSyncExternalStore`, `useEffectEvent`, hydration-safe storage and browser-environment hooks, and debounce/throttle values. (18 practices; sections: `useId`, Rules of Hooks & Refs; `useEffect`, Cleanup & Closures; Custom Hooks & Data Fetching; Render Optimization, Memoization & React Compiler; Layout Effects, External Stores & Effect Events; Reusable Hook Patterns.)
 
+## React Concurrent Rendering, Actions & Suspense Composition
+
+- [React Concurrent Rendering, Actions & Suspense Composition index](index-react-concurrent.md): `useDeferredValue`, `useTransition` / `startTransition`, async Actions and `<form action>`, `useOptimistic`, client composition of `use()` / Suspense / Error Boundaries, and starting Server Component fetches early to pass or await promises. (6 practices; sections: Transitions, Deferred Values & Actions; Suspense, `use` & Network Composition.)
+
 ## Developer Mindset, Debugging & Tooling
 
 - [Developer Mindset, Debugging & Tooling index](index-developer-mindset.md): Learning habits, debugging strategy, and DevTools/package tooling workflows. (20 practices; sections: Developer Mindset & Learning; Debugging & Tooling.)
