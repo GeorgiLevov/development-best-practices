@@ -33,3 +33,9 @@
 - [Synchronize layout measurements before paint with `useLayoutEffect`](synchronize-layout-before-paint-with-uselayouteffect.md): Use `useLayoutEffect` only when the first paint would flicker or misplace UI without a DOM or viewport measurement; keep ordinary sync work in `useEffect`.
 - [Subscribe to external stores with `useSyncExternalStore`](subscribe-to-external-stores-with-usesyncexternalstore.md): Subscribe to values that already live outside React (`matchMedia`, `navigator.onLine`, other stores) with a stable `subscribe`/`getSnapshot` pair instead of mirroring them in `useState`.
 - [Extract non-synchronizing reads from Effects with `useEffectEvent`](extract-nonsynchronizing-reads-with-useeffectevent.md): In React 19.2+, wrap reactive values that an Effect must read but should not re-subscribe to in `useEffectEvent`; keep synchronizing values in the dependency array.
+
+## Reusable Hook Patterns
+
+- [Persist state in hydration-safe web storage hooks](persist-state-in-hydration-safe-web-storage-hooks.md): Subscribe to `localStorage`/`sessionStorage` with `useSyncExternalStore`, JSON-serialize writes, and gate client-only hooks with `useIsClient` or a throwing `getServerSnapshot`.
+- [Debounce or throttle reactive values in custom hooks](debounce-or-throttle-reactive-values-in-custom-hooks.md): Delay a rapidly changing value with a restartable timeout (debounce) or a trailing interval (throttle), and always clear the timer on cleanup.
+- [Subscribe to the browser environment in hydration-safe hooks](subscribe-to-browser-environment-in-hydration-safe-hooks.md): Start viewport size/scroll at a server-safe `null`, measure in `useLayoutEffect`, and wrap media/visibility/language/network stores in `useSyncExternalStore`.
