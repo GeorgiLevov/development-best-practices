@@ -9,7 +9,7 @@
 - [Build baseline terminal fluency: Bash/Zsh navigation, `--help` flags, `Ctrl+C`, and split panes](build-cli-fluency-with-bash-flags-interrupts-and-split-panes.md): Standardize on Bash/Zsh (or WSL on Windows), master `pwd`/`ls`/`cd`/`--help`/`Ctrl+C`, and split dev-server and command panes per project.
 - [Avoid "gear procrastination": keep editor setup lean and pair Prettier format-on-save with ESLint](avoid-gear-procrastination-and-pair-prettier-with-eslint.md): Keep editor plugins minimal, use Prettier format-on-save (and syntax-error feedback) alongside `eslint-config-next` + `eslint-config-prettier`.
 - [Pin Node LTS versions with `nvm` and automate repetitive workflows via `package.json` scripts](manage-node-lts-with-nvm-and-automate-tasks-with-npm-scripts.md): Stick to Node LTS via `nvm`, commit lockfiles, use `npx` for one-off CLIs, and script repetitive scaffolding or `prebuild` tasks in `package.json`.
-- [Understand transpiler vs bundler roles and choose the simplest fit instead of suffering tool paralysis](understand-transpiler-bundler-roles-and-avoid-decision-paralysis.md): Distinguish transpilers (`Babel`/`SWC`) from bundlers (`Vite`/`Webpack`/`Turbopack`), keep bundling for compression/waterfalls, and start with the simplest fitting stack.
+- [Understand transpiler vs bundler roles and choose the simplest fit instead of suffering tool paralysis](understand-transpiler-bundler-roles-and-avoid-decision-paralysis.md): Distinguish transpilers (`Babel`/`SWC`) from bundlers (`Vite`/`Webpack`/`Turbopack`), compile syntax vs polyfill missing runtime APIs (`Promise`/`fetch`/`includes`), keep bundling for compression/waterfalls, and start with the simplest fitting stack.
 
 ## Learning, Portfolio & Technical Interviews
 

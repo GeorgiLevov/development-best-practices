@@ -20,6 +20,6 @@ const updated = {
 };
 ```
 
-**Avoid**: Assuming `const` or `Object.freeze(obj)` makes nested structures immutable, spreading `...defaults` *after* overrides, or forgetting that shallow spread leaves nested objects shared.
+**Avoid**: Assuming `const` or `Object.freeze(obj)` makes nested structures immutable, spreading `...defaults` *after* overrides, or forgetting that shallow spread leaves nested objects shared. For `var` function-scope, hoisting, and the temporal dead zone, see [Prefer `const` and `let` over function-scoped `var`, and respect the temporal dead zone](prefer-const-and-let-over-function-scoped-var.md).
 
-**Source**: [Assignment Vs. Mutation — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/11-assignment-vs-mutation), [Rest / Spread — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/12-rest-spread), [Object.freeze() — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
+**Source**: [Assignment Vs. Mutation — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/11-assignment-vs-mutation), [Rest / Spread — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/12-rest-spread), [Object.freeze() — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze), [Variable Declarations (var vs let vs const) — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/variable-declarations-var-vs-let-vs-const)

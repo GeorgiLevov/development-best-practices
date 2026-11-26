@@ -4,7 +4,7 @@
 
 **When to use**: When organizing functions, constants, and components across JavaScript/TypeScript files.
 
-**Rule**: Treat every `.js`/`.ts` file as an isolated ES module where unexported bindings remain private rather than leaking into a shared global scope. Use **named exports** (`export function formatDate() {}`) for multi-utility modules so callers import exact symbols by name (`import { formatDate } from './dates'`) and tree-shaking stays clean; reserve **default exports** (`export default Component`) for single primary module entities (imported without braces, matching the file's component name). Use explicit relative paths (`./`, `../`) or configured `@/*` aliases, and wrap arrow implicit object returns in parentheses (`x => ({ x })`) so `{}` is parsed as an expression, not a block.
+**Rule**: Treat every `.js`/`.ts` file as an isolated ES module where unexported bindings remain private rather than leaking into a shared global scope. That privacy used to be faked with IIFEs (a function scope around the file) and later with CommonJS (`require` / `module.exports`), which can load modules anywhere, including inside `if`. ES modules instead use **static**, top-level `import`/`export` so bundlers can tree-shake unused exports; load them in the browser with `<script type="module">`, and use dynamic `import()` when a module must be loaded conditionally. Use **named exports** (`export function formatDate() {}`) for multi-utility modules so callers import exact symbols by name (`import { formatDate } from './dates'`) and tree-shaking stays clean; reserve **default exports** (`export default Component`) for single primary module entities (imported without braces, matching the file's component name). Use explicit relative paths (`./`, `../`) or configured `@/*` aliases, and wrap arrow implicit object returns in parentheses (`x => ({ x })`) so `{}` is parsed as an expression, not a block.
 
 **Example**:
 ```js
@@ -14,6 +14,6 @@ export const double = (n) => n * INTERNAL_FACTOR;
 export const toPoint = (x, y) => ({ x, y });
 ```
 
-**Avoid**: Attaching shared state to `window` to bypass module boundaries, mixing inconsistent `export default` + `export *` re-exports, or writing `x => { key: x }` without parentheses.
+**Avoid**: Attaching shared state to `window` to bypass module boundaries, mixing inconsistent `export default` + `export *` re-exports, writing `x => { key: x }` without parentheses, or placing a static `import` inside an `if` (use `import()` for conditional loads).
 
-**Source**: [JavaScript Modules — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/07-javascript-modules), [Arrow Functions — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/04-arrow-functions), [Object Destructuring — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/05-object-destructuring)
+**Source**: [JavaScript Modules — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/07-javascript-modules), [Arrow Functions — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/04-arrow-functions), [Object Destructuring — Joy of React](https://courses.joshwcomeau.com/joy-of-react/10-javascript-primer/05-object-destructuring), [From IIFEs to CommonJS to ES6 Modules — Fireship Modern JavaScript](https://fireship.dev/c/modern-javascript/from-iifes-to-commonjs-to-es6-modules)
