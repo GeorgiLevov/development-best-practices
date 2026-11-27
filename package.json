@@ -1,0 +1,12 @@
+{
+  "name": "development-best-practices",
+  "private": true,
+  "type": "module",
+  "description": "Studio best practices and the approved Cursor skill catalog.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test automation/bootstrap-cursor-skills.test.mjs"
+  }
+}

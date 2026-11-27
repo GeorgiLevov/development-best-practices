@@ -16,6 +16,14 @@ Curated development best practices for coding agents.
 - Each topic file and sub-index should start with a pointer back to the index.
 - Keep individual files focused and under ~150 lines when possible.
 
+## Cursor skills
+
+Approved Cursor skills and the rule for installing them: [policies/agent-skill-provisioning.md](policies/agent-skill-provisioning.md).
+
+```bash
+node automation/bootstrap-cursor-skills.mjs --target /path/to/repo
+```
+
 ## Size estimate
 
 100,000 files × ~150 lines × ~60 bytes/line ≈ 900 MB of Markdown text.
