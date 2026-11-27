@@ -1,0 +1,43 @@
+{
+  "detection_note": "First matching rule wins. A root manifest.json with manifest_version is a web extension even when package.json also depends on react, so it does not get the React skills.",
+  "always": [
+    "systematic-debugging",
+    "verification-before-completion"
+  ],
+  "detection": [
+    { "profile": "web-extension", "when": "manifest_version" },
+    { "profile": "next", "when": "dependency", "name": "next" },
+    { "profile": "react", "when": "dependency", "name": "react" },
+    { "profile": "preact", "when": "dependency", "name": "preact" },
+    { "profile": "vanilla", "when": "dependency", "name": "vite" },
+    { "profile": "vanilla", "when": "root_html" },
+    { "profile": "backend", "when": "package_json" }
+  ],
+  "profiles": {
+    "react": [
+      "frontend-design",
+      "playwright-cli",
+      "vercel-react-best-practices",
+      "vercel-composition-patterns"
+    ],
+    "next": [
+      "frontend-design",
+      "playwright-cli",
+      "vercel-react-best-practices",
+      "vercel-composition-patterns"
+    ],
+    "preact": [
+      "frontend-design",
+      "playwright-cli"
+    ],
+    "vanilla": [
+      "frontend-design",
+      "playwright-cli"
+    ],
+    "web-extension": [
+      "frontend-design",
+      "playwright-cli"
+    ],
+    "backend": []
+  }
+}
